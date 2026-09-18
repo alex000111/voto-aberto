@@ -1,15 +1,19 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
+import AccessibilityToolbar from './AccessibilityToolbar';
 
 export default function Header() {
   return (
     <>
-      {/* Faixa superior cívica */}
+      {/* Faixa superior cívica com Controles de Acessibilidade */}
       <div className="topbar-civic">
-        <span>Observatório Eleitoral Independente • Eleições 2026 • Dados Oficiais do TSE</span>
-        <div className="live-indicator">
-          <div className="live-dot" />
-          <span>Base Oficial Ativa</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '14px', flexWrap: 'wrap' }}>
+          <span>Observatório Eleitoral • Eleições 2026</span>
+          <div className="live-indicator">
+            <div className="live-dot" />
+            <span>Base Oficial Ativa</span>
+          </div>
         </div>
+        <AccessibilityToolbar />
       </div>
 
       {/* Cabeçalho principal */}
@@ -24,12 +28,12 @@ export default function Header() {
 
         <nav>
           <Link href="/candidaturas">Candidaturas</Link>
+          <Link href="/propostas" className="highlight">Propostas & Resumos</Link>
           <Link href="/comparador">Comparador</Link>
           <Link href="/pesquisas">Pesquisas</Link>
           <Link href="/financiamento">Financiamento</Link>
-          <Link href="/recife" className="highlight">E o Recife?</Link>
-          <Link href="/assistente" className="highlight">Assistente Cívico</Link>
-          <Link href="/checagem">Checagem</Link>
+          <Link href="/recife">E o Recife?</Link>
+          <Link href="/assistente">Assistente Cívico</Link>
         </nav>
       </header>
     </>

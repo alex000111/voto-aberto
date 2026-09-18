@@ -1,4 +1,4 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 
 const modules = [
   {
@@ -6,6 +6,12 @@ const modules = [
     title: 'Quem disputa',
     text: 'Perfis padronizados, registros oficiais no TSE, histórico de bens e coligações.',
     url: '/candidaturas'
+  },
+  {
+    tag: 'PROPOSTAS & RESUMOS',
+    title: 'Propostas com síntese',
+    text: 'Metas e diretrizes das candidaturas com opção de leitura rápida em tópicos ou texto oficial na íntegra.',
+    url: '/propostas'
   },
   {
     tag: 'PLANOS DE GOVERNO',
@@ -76,14 +82,14 @@ export default function Home() {
             Sem ranking de políticos e sem recomendação de voto.
           </p>
           <div className="actions">
-            <Link className="btn" href="/candidaturas">
+            <Link className="btn" href="/propostas">
+              Consultar propostas & resumos
+            </Link>
+            <Link className="btn secondary" href="/candidaturas">
               Explorar candidaturas
             </Link>
             <Link className="btn secondary" href="/recife">
               Ver indicadores de Recife
-            </Link>
-            <Link className="btn secondary" href="/assistente">
-              Consultar documentos
             </Link>
           </div>
         </div>
