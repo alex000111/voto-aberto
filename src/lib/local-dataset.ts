@@ -1,4 +1,4 @@
-﻿export const localCandidates = [
+export const localCandidates = [
   {
     id: 'cand-pe-gov-01',
     election_year: 2026,
@@ -516,6 +516,7 @@ export const localChangeEvents = [
     source_id: 'tse-candidatos-2026',
     entity_type: 'candidate',
     entity_key: 'cand-pe-gov-01',
+    new_fingerprint: 'fp-cand-pe-gov-01',
     detected_at: '2026-09-16T15:30:00Z',
     details: { status: 'Deferido pelo TRE-PE', party: 'PSDB' }
   },
@@ -524,6 +525,7 @@ export const localChangeEvents = [
     source_id: 'tse-candidatos-2026',
     entity_type: 'candidate',
     entity_key: 'cand-pe-gov-02',
+    new_fingerprint: 'fp-cand-pe-gov-02',
     detected_at: '2026-09-16T15:30:00Z',
     details: { status: 'Deferido pelo TRE-PE', party: 'PSB' }
   }
