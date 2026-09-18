@@ -16,8 +16,8 @@ export default async function Page({
   // Obter listas únicas para os filtros
   const availableTopics = Array.from(new Set(detailedProposals.map(p => p.topic)));
   const availableCandidates = Array.from(
-    new Set(detailedProposals.map(p => JSON.stringify({ id: p.candidate_id, name: p.candidate_name, office: p.office })))
-  ).map(s => JSON.parse(s) as { id: string; name: string; office: string });
+    new Set(detailedProposals.map(p => JSON.stringify({ id: p.candidate_id, name: p.candidate_name, office: p.office, uf: p.uf })))
+  ).map(s => JSON.parse(s) as { id: string; name: string; office: string; uf: string });
 
   // Filtragem
   const filtered = detailedProposals.filter(p => {
@@ -90,7 +90,7 @@ export default async function Page({
           <select name="candidato" defaultValue={candidato}>
             <option value="">Todas as candidaturas</option>
             {availableCandidates.map(c => (
-              <option key={c.id} value={c.id}>{c.name} ({c.office})</option>
+              <option key={c.id} value={c.id}>{c.name} ({c.office} · {c.uf})</option>
             ))}
           </select>
         </label>

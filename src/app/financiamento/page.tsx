@@ -1,13 +1,141 @@
 import Link from 'next/link';
-import {dbConfigured,dbSelect} from '@/lib/supabase-rest';
-import {money} from '@/lib/election-data';
-import {UFS} from '@/lib/candidate-query';
+import { dbConfigured, dbSelect } from '@/lib/supabase-rest';
+import { money } from '@/lib/election-data';
+import { UFS, UF_NAMES } from '@/lib/candidate-query';
 import DataNotice from '@/components/DataNotice';
-export const dynamic='force-dynamic';
-export default async function Page({searchParams}:{searchParams:Promise<{uf?:string;kind?:string;page?:string}>}){
- const sp=await searchParams,uf=UFS.includes(sp.uf||'')?sp.uf!:'',kind=['receita','despesa'].includes(sp.kind||'')?sp.kind!:'',page=Math.min(10000,Math.max(1,Math.trunc(Number(sp.page)||1)));
- const query=new URLSearchParams({select:'*,candidates(ballot_name,party)',order:'occurred_on.desc,id.asc',limit:'25',offset:String((page-1)*24)});if(uf)query.set('uf',`eq.${uf}`);if(kind)query.set('kind',`eq.${kind}`);
- let failed=false;const rows:any[]=dbConfigured?await dbSelect('finance_records',query.toString()).catch(()=>{failed=true;return []}):[];
- const pageUrl=(n:number)=>`/financiamento?${new URLSearchParams({uf,kind,page:String(n)})}`;
- return <main className="page"><div className="eyebrow">PRESTAÇÃO DE CONTAS</div><h1>Registros financeiros</h1><p className="lead">Linhas declaradas ao TSE, com descrição, valor, contraparte e candidatura. As despesas exibidas são contratadas, não necessariamente pagas.</p><div className="note">Um identificador da fonte pode aparecer em vários itens. Estes registros não são somados em um total de campanha. Confira o tipo de prestação e o arquivo original.</div><form className="filters"><label>UF<select name="uf" defaultValue={uf}><option value="">Todas</option>{UFS.map(x=><option key={x}>{x}</option>)}</select></label><label>Tipo<select name="kind" defaultValue={kind}><option value="">Todos</option><option value="receita">Receita</option><option value="despesa">Despesa contratada</option></select></label><button className="btn">Filtrar</button></form>{!dbConfigured?<DataNotice state="unconfigured"/>:failed?<DataNotice state="error"/>:!rows.length?<DataNotice state="empty"/>:<div className="grid">{rows.slice(0,24).map(r=><article className="card" key={r.id}><h2>{r.kind==='receita'?'Receita':'Despesa contratada'} · {money(r.amount)}</h2><p><Link href={`/candidaturas/${encodeURIComponent(r.candidate_id)}`}>{r.candidates?.ballot_name||'Ver candidatura'}</Link> · {r.uf}</p><p>{r.description||r.category||'Sem descrição'}</p><p><b>Contraparte:</b> {r.counterparty||'—'}</p><p><b>Data:</b> {r.occurred_on||'—'}</p><p><b>Prestação:</b> {r.filing_type||'não informada'} · {r.filing_date||'—'}</p><p><a href={r.source_url||'https://dadosabertos.tse.jus.br/dataset/prestacao-de-contas-eleitorais-2026'} target="_blank" rel="noreferrer">Arquivo oficial</a></p><p className="stamp">Coleta: {r.collected_at?new Date(r.collected_at).toLocaleString('pt-BR'):'não informada'}</p></article>)}</div>}{dbConfigured&&!failed&&<nav className="actions" aria-label="Paginação">{page>1&&<Link className="btn secondary" href={pageUrl(page-1)}>Anterior</Link>}{rows.length>24&&<Link className="btn" href={pageUrl(page+1)}>Próxima</Link>}</nav>}</main>;
+
+export const dynamic = 'force-dynamic';
+
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<{ uf?: string; kind?: string; page?: string }>;
+}) {
+  const sp = await searchParams;
+  const uf = UFS.includes(sp.uf || '') ? sp.uf! : '';
+  const kind = ['receita', 'despesa'].includes(sp.kind || '') ? sp.kind! : '';
+  const page = Math.min(10000, Math.max(1, Math.trunc(Number(sp.page) || 1)));
+
+  const query = new URLSearchParams({
+    select: '*,candidates(ballot_name,party)',
+    order: 'occurred_on.desc,id.asc',
+    limit: '25',
+    offset: String((page - 1) * 24),
+  });
+  if (uf) query.set('uf', `eq.${uf}`);
+  if (kind) query.set('kind', `eq.${kind}`);
+
+  let failed = false;
+  const rows: any[] = dbConfigured
+    ? await dbSelect('finance_records', query.toString()).catch(() => {
+        failed = true;
+        return [];
+      })
+    : [];
+
+  const pageUrl = (n: number) =>
+    `/financiamento?${new URLSearchParams({ ...(uf ? { uf } : {}), ...(kind ? { kind } : {}), page: String(n) })}`;
+
+  return (
+    <main className="page">
+      <div className="eyebrow">PRESTAÇÃO DE CONTAS</div>
+      <h1>Registros financeiros</h1>
+      <p className="lead">
+        Linhas declaradas ao TSE pelos colégios eleitorais cadastrados, com descrição, valor, contraparte e candidatura. As despesas exibidas são contratadas, não necessariamente pagas.
+      </p>
+
+      <div className="note">
+        Um identificador da fonte pode aparecer em vários itens. Estes registros não são somados em um total de campanha. Confira o tipo de prestação e o arquivo original.
+      </div>
+
+      <form className="filters">
+        <label>
+          Colégio Eleitoral / UF
+          <select name="uf" defaultValue={uf}>
+            <option value="">Todas as UFs cadastradas</option>
+            {UFS.map(x => (
+              <option key={x} value={x}>
+                {UF_NAMES[x] || x}
+              </option>
+            ))}
+          </select>
+        </label>
+
+        <label>
+          Tipo de lançamento
+          <select name="kind" defaultValue={kind}>
+            <option value="">Todos</option>
+            <option value="receita">Receita</option>
+            <option value="despesa">Despesa contratada</option>
+          </select>
+        </label>
+
+        <button className="btn" type="submit">Filtrar</button>
+        <Link className="btn secondary" href="/financiamento">
+          Limpar
+        </Link>
+      </form>
+
+      {!dbConfigured ? (
+        <DataNotice state="unconfigured" />
+      ) : failed ? (
+        <DataNotice state="error" />
+      ) : !rows.length ? (
+        <DataNotice state="empty" />
+      ) : (
+        <div className="grid">
+          {rows.slice(0, 24).map(r => (
+            <article className="card" key={r.id}>
+              <h2>
+                {r.kind === 'receita' ? 'Receita' : 'Despesa contratada'} · {money(r.amount)}
+              </h2>
+              <p>
+                <Link href={`/candidaturas/${encodeURIComponent(r.candidate_id)}`}>
+                  {r.candidates?.ballot_name || 'Ver candidatura'}
+                </Link>{' '}
+                · {r.uf}
+              </p>
+              <p>{r.description || r.category || 'Sem descrição'}</p>
+              <p>
+                <b>Contraparte:</b> {r.counterparty || '—'}
+              </p>
+              <p>
+                <b>Data:</b> {r.occurred_on || '—'}
+              </p>
+              <p>
+                <b>Prestação:</b> {r.filing_type || 'não informada'} · {r.filing_date || '—'}
+              </p>
+              <p>
+                <a
+                  href={r.source_url || 'https://dadosabertos.tse.jus.br/dataset/prestacao-de-contas-eleitorais-2026'}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Arquivo oficial no TSE ↗
+                </a>
+              </p>
+              <p className="stamp">
+                Coleta TSE: {r.collected_at ? new Date(r.collected_at).toLocaleString('pt-BR') : 'não informada'}
+              </p>
+            </article>
+          ))}
+        </div>
+      )}
+
+      {dbConfigured && !failed && (
+        <nav className="actions" aria-label="Paginação">
+          {page > 1 && (
+            <Link className="btn secondary" href={pageUrl(page - 1)}>
+              Anterior
+            </Link>
+          )}
+          {rows.length > 24 && (
+            <Link className="btn" href={pageUrl(page + 1)}>
+              Próxima
+            </Link>
+          )}
+        </nav>
+      )}
+    </main>
+  );
 }
