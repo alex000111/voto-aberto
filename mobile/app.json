@@ -1,0 +1,1 @@
+{"expo":{"name":"Voto Aberto","slug":"voto-aberto","scheme":"votoaberto","version":"0.1.0","orientation":"portrait","userInterfaceStyle":"automatic","ios":{"supportsTablet":true,"bundleIdentifier":"br.org.votoaberto.app"},"android":{"package":"br.org.votoaberto.app"},"plugins":["expo-router"]}}

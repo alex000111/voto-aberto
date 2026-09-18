@@ -1,0 +1,2 @@
+import Link from 'next/link';
+export default function Header(){return <header><Link className="brand" href="/"><b>Voto</b> Aberto</Link><nav><Link href="/candidaturas">Candidaturas</Link><Link href="/comparador">Propostas</Link><Link href="/pesquisas">Pesquisas</Link><Link href="/financiamento">Financiamento</Link><Link href="/checagem">Checagem</Link><Link href="/pernambuco">PE</Link><Link href="/recife">Recife</Link></nav></header>}

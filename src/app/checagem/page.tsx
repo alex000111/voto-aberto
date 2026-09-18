@@ -1,0 +1,7 @@
+import {dbConfigured,dbSelect} from '@/lib/supabase-rest';
+import DataNotice from '@/components/DataNotice';
+export const dynamic='force-dynamic';
+export default async function Page(){
+ let failed=false;const rows:any[]=dbConfigured?await dbSelect('claims','select=*,evidence(*)&published_at=not.is.null&reviewed_at=not.is.null&order=published_at.desc&limit=50').catch(()=>{failed=true;return []}):[];
+ return <main className="page"><div className="eyebrow">RADAR DE ALEGAÇÕES</div><h1>Checagem com evidências</h1><p className="lead">Alegações, contexto e evidências permanecem separados. Somente dossiês com revisão editorial e data de publicação são exibidos.</p>{!dbConfigured?<DataNotice state="unconfigured"/>:failed?<DataNotice state="error"/>:!rows.length?<div className="note">Ainda não há dossiês revisados publicados.</div>:rows.map(c=><article className="card" key={c.id}><h2>{c.claim_text}</h2><p>{c.speaker||'Autor não informado'} · {c.occurred_at?new Date(c.occurred_at).toLocaleDateString('pt-BR'):'Data não informada'}</p><p><b>Status editorial:</b> {c.status}</p><p>{c.review_summary}</p>{c.origin_url&&<a href={c.origin_url} rel="noreferrer" target="_blank">Origem da alegação</a>}<h3>Evidências revisadas</h3>{(c.evidence||[]).filter((e:any)=>e.reviewed_at).map((e:any)=><blockquote key={e.id}>{e.excerpt}<p><a href={e.url} rel="noreferrer" target="_blank">Ver evidência</a></p></blockquote>)}</article>)}<div className="note">Não há classificação automática de alegações por IA. A base precisa de evidências primárias e revisão editorial.</div></main>;
+}
