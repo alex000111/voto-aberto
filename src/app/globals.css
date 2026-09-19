@@ -214,7 +214,7 @@ header {
 
 nav {
   display: flex;
-  gap: 18px;
+  gap: 8px;
   font-size: calc(14px * var(--font-scale));
   font-weight: 650;
   color: var(--ink-light);
@@ -222,20 +222,62 @@ nav {
   flex-wrap: wrap;
 }
 
-nav a {
-  padding: 8px 12px;
+nav a.nav-link, nav a {
+  position: relative;
+  padding: 8px 14px;
   border-radius: var(--radius-sm);
-  transition: all 0.15s ease;
+  transition: all 0.18s ease;
+  color: var(--ink-light);
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
 }
 
-nav a:hover {
+nav a.nav-link:hover, nav a:hover {
   color: var(--blue);
   background: var(--blue-subtle);
 }
 
-nav a.highlight {
+nav a.nav-link.active {
   color: var(--blue);
   background: var(--blue-subtle);
+  font-weight: 750;
+  box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.25);
+}
+
+/* Marcador visual acima do item clicado */
+nav a.nav-link .active-marker {
+  position: absolute;
+  top: -4px;
+  left: 14%;
+  right: 14%;
+  height: 3px;
+  background: var(--blue);
+  border-radius: 4px 4px 0 0;
+  box-shadow: 0 1px 6px rgba(37, 99, 235, 0.65);
+}
+
+/* Modo escuro para o marcador ativo */
+[data-theme="dark"] nav a.nav-link.active {
+  color: #60a5fa;
+  background: rgba(37, 99, 235, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(96, 165, 250, 0.35);
+}
+
+[data-theme="dark"] nav a.nav-link .active-marker {
+  background: #38bdf8;
+  box-shadow: 0 0 10px #38bdf8;
+}
+
+/* Modo alto contraste */
+[data-contrast="high"] nav a.nav-link.active {
+  color: #ffff00;
+  background: #000000;
+  outline: 2px solid #ffff00;
+}
+
+[data-contrast="high"] nav a.nav-link .active-marker {
+  background: #ffff00;
 }
 
 /* Espaçamento geral de páginas */

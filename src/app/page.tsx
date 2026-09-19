@@ -50,9 +50,9 @@ const modules = [
     url: '/pernambuco'
   },
   {
-    tag: 'EVIDÊNCIAS',
-    title: 'Radar de alegações',
-    text: 'Dossiês documentados e histórico de checagens sem transformar IA em árbitro da verdade.',
+    tag: 'ANTI-FAKE NEWS',
+    title: 'Radar Anti-Fake News & Checagem',
+    text: 'Scanner de boatos de WhatsApp, canal oficial SOS Voto (1491) e catálogo de desmentidos do TSE com base legal.',
     url: '/checagem'
   },
   {

@@ -1,7 +1,23 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import AccessibilityToolbar from './AccessibilityToolbar';
 
+const navItems = [
+  { href: '/candidaturas', label: 'Candidaturas' },
+  { href: '/propostas', label: 'Propostas & Resumos' },
+  { href: '/comparador', label: 'Comparador' },
+  { href: '/pesquisas', label: 'Pesquisas' },
+  { href: '/financiamento', label: 'Financiamento' },
+  { href: '/recife', label: 'E o Recife?' },
+  { href: '/assistente', label: 'Assistente Cívico' },
+  { href: '/checagem', label: '🛡️ Anti-Fake News' },
+];
+
 export default function Header() {
+  const pathname = usePathname() || '';
+
   return (
     <>
       {/* Faixa superior cívica com Controles de Acessibilidade */}
@@ -10,7 +26,7 @@ export default function Header() {
           <span>Observatório Eleitoral • Eleições 2026</span>
           <div className="live-indicator">
             <div className="live-dot" />
-            <span>Base Oficial Ativa</span>
+            <span>Base Oficial Ativa (20.984 registros)</span>
           </div>
         </div>
         <AccessibilityToolbar />
@@ -26,14 +42,24 @@ export default function Header() {
           </Link>
         </div>
 
-        <nav>
-          <Link href="/candidaturas">Candidaturas</Link>
-          <Link href="/propostas" className="highlight">Propostas & Resumos</Link>
-          <Link href="/comparador">Comparador</Link>
-          <Link href="/pesquisas">Pesquisas</Link>
-          <Link href="/financiamento">Financiamento</Link>
-          <Link href="/recife">E o Recife?</Link>
-          <Link href="/assistente">Assistente Cívico</Link>
+        <nav aria-label="Navegação principal">
+          {navItems.map((item) => {
+            const isActive =
+              pathname === item.href ||
+              (item.href !== '/' && pathname.startsWith(item.href));
+
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`nav-link ${isActive ? 'active' : ''}`}
+                aria-current={isActive ? 'page' : undefined}
+              >
+                {isActive && <span className="active-marker" aria-hidden="true" />}
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
       </header>
     </>
