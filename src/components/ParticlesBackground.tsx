@@ -19,7 +19,7 @@ export default function ParticlesBackground() {
   if (!init) return null;
 
   return (
-    <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}>
+    <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0, pointerEvents: 'none' }}>
       <Particles
         id="tsparticles"
         options={{
@@ -35,7 +35,7 @@ export default function ParticlesBackground() {
               speed: 2, 
               straight: true 
             },
-            number: { density: { enable: true }, value: 80 },
+            number: { value: 100 },
             opacity: { 
               value: 0.5
             },
