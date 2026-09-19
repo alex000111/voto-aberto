@@ -4,3 +4,4 @@ export async function listCandidates(opts:{uf?:string;office?:string;limit?:numb
 export async function getCandidate(id:string){if(!dbConfigured)return null;const x=await dbSelect('candidates',`id=eq.${encodeURIComponent(id)}&limit=1`);return (x[0]??null) as Candidate|null;}
 export async function getCandidateHistory(id:string){if(!dbConfigured)return [];return dbSelect('candidate_versions',`candidate_id=eq.${encodeURIComponent(id)}&order=valid_from.desc&limit=30`);}
 export async function getCandidateChanges(id:string){if(!dbConfigured)return [];return dbSelect('change_events',`entity_type=eq.candidate&entity_key=eq.${encodeURIComponent(id)}&order=detected_at.desc&limit=30`);}
+export async function getCandidateProposals(id:string){if(!dbConfigured)return [];return dbSelect('proposals',`candidate_id=eq.${encodeURIComponent(id)}&order=topic.asc&limit=30`).catch(()=>[]);}

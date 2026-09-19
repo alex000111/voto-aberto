@@ -4,7 +4,7 @@ const BASE='https://dadosabertos.tse.jus.br';
 const CKAN=`${BASE}/api/3/action/package_show?id=candidatos-2026`;
 
 export async function getCandidateDatasetMetadata():Promise<DatasetSummary>{
-  const r=await fetch(CKAN,{signal:AbortSignal.timeout(15000),next:{revalidate:1800},headers:{accept:'application/json'}});
+  const r=await fetch(CKAN,{signal:AbortSignal.timeout(15000),next:{revalidate:1800},headers:{accept:'application/json','User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 (VotoAberto Civic Platform)'}});
   if(!r.ok) throw new Error(`TSE CKAN ${r.status}`);
   const body=await r.json();
   if(!body?.success) throw new Error('Resposta inválida do catálogo do TSE');

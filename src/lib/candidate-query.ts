@@ -9,17 +9,36 @@ export const REGISTERED_UFS = ['BR', 'BA', 'CE', 'MG', 'PE', 'PR', 'RJ', 'RS', '
 
 export const UF_NAMES: Record<string, string> = {
   BR: 'BR — Presidência da República',
+  AC: 'AC — Acre',
+  AL: 'AL — Alagoas',
+  AM: 'AM — Amazonas',
+  AP: 'AP — Amapá',
   BA: 'BA — Bahia',
   CE: 'CE — Ceará',
+  DF: 'DF — Distrito Federal',
+  ES: 'ES — Espírito Santo',
+  GO: 'GO — Goiás',
+  MA: 'MA — Maranhão',
   MG: 'MG — Minas Gerais',
+  MS: 'MS — Mato Grosso do Sul',
+  MT: 'MT — Mato Grosso',
+  PA: 'PA — Pará',
+  PB: 'PB — Paraíba',
   PE: 'PE — Pernambuco',
+  PI: 'PI — Piauí',
   PR: 'PR — Paraná',
   RJ: 'RJ — Rio de Janeiro',
+  RN: 'RN — Rio Grande do Norte',
+  RO: 'RO — Rondônia',
+  RR: 'RR — Roraima',
   RS: 'RS — Rio Grande do Sul',
-  SP: 'SP — São Paulo'
+  SC: 'SC — Santa Catarina',
+  SE: 'SE — Sergipe',
+  SP: 'SP — São Paulo',
+  TO: 'TO — Tocantins'
 };
 
-export const UFS: readonly string[] = REGISTERED_UFS;
+export const UFS: readonly string[] = ALL_BRAZILIAN_UFS;
 export const OFFICES = ['Presidente', 'Governador', 'Senador', 'Deputado Federal', 'Deputado Estadual', 'Deputado Distrital', 'Vice-presidente', 'Vice-governador', '1º Suplente', '2º Suplente'];
 export type CandidateFilters = { uf?: string; office?: string; party?: string; q?: string; limit?: number; page?: number };
 export function candidateQuery(opts:CandidateFilters={}){

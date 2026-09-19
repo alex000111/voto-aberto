@@ -196,10 +196,10 @@ export const detailedProposals: ProposalItem[] = [
   },
   {
     id: 'prop-jones-edu',
-    candidate_id: 'cand-pe-dep-03',
+    candidate_id: '170002550641',
     candidate_name: 'Jones Manoel',
     office: 'DEPUTADO FEDERAL',
-    party: 'PCB',
+    party: 'PSOL',
     uf: 'PE',
     topic: 'Educação',
     summary_bullets: [
@@ -214,10 +214,10 @@ export const detailedProposals: ProposalItem[] = [
   },
   {
     id: 'prop-jones-tra',
-    candidate_id: 'cand-pe-dep-03',
+    candidate_id: '170002550641',
     candidate_name: 'Jones Manoel',
     office: 'DEPUTADO FEDERAL',
-    party: 'PCB',
+    party: 'PSOL',
     uf: 'PE',
     topic: 'Trabalho e Direitos',
     summary_bullets: [

@@ -11,7 +11,7 @@ export function officialUrl(value:string){
 export async function downloadOfficial(value:string){
  let url=officialUrl(value);
  for(let hop=0;hop<5;hop++){
-  const response=await fetch(url,{cache:'no-store',redirect:'manual',signal:AbortSignal.timeout(120000)});
+  const response=await fetch(url,{cache:'no-store',redirect:'manual',signal:AbortSignal.timeout(120000),headers:{'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 (VotoAberto Civic Platform)'}});
   if([301,302,303,307,308].includes(response.status)){const next=response.headers.get('location');await response.body?.cancel();if(!next)throw new Error('Redirecionamento inválido.');url=officialUrl(new URL(next,url).href);continue;}
   if(!response.ok||!response.body)throw new Error(`Download do TSE falhou: HTTP ${response.status}.`);
   if(Number(response.headers.get('content-length'))>MAX_DOWNLOAD){await response.body.cancel();throw new Error('Arquivo excede o limite de download.');}
