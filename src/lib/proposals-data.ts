@@ -193,5 +193,41 @@ export const detailedProposals: ProposalItem[] = [
     document_url: 'https://divulgacandcontas.tse.jus.br',
     page_number: 38,
     reviewed_at: '2026-09-14T11:30:00Z'
+  },
+  {
+    id: 'prop-jones-edu',
+    candidate_id: 'cand-pe-dep-03',
+    candidate_name: 'Jones Manoel',
+    office: 'DEPUTADO FEDERAL',
+    party: 'PCB',
+    uf: 'PE',
+    topic: 'Educação',
+    summary_bullets: [
+      'Revogação integral da reforma do Novo Ensino Médio em nível federal.',
+      'Elevação dos investimentos públicos em educação para o patamar de 10% do PIB nacional.',
+      'Fortalecimento e expansão da rede federal (IFPE e UFRPE) com garantia de assistência estudantil e moradia universitária.'
+    ],
+    excerpt: 'Revogação integral do Novo Ensino Médio, destinação de 10% do PIB para a educação pública e valorização do piso salarial dos professores com dedicação exclusiva e expansão da assistência estudantil.',
+    document_url: 'https://divulgacandcontas.tse.jus.br',
+    page_number: 8,
+    reviewed_at: '2026-09-14T14:00:00Z'
+  },
+  {
+    id: 'prop-jones-tra',
+    candidate_id: 'cand-pe-dep-03',
+    candidate_name: 'Jones Manoel',
+    office: 'DEPUTADO FEDERAL',
+    party: 'PCB',
+    uf: 'PE',
+    topic: 'Trabalho e Direitos',
+    summary_bullets: [
+      'Redução da jornada máxima para 30 horas semanais sem corte de salários (pelo fim da escala 6x1).',
+      'Revogação das contrarreformas trabalhista (Lei 13.467/17) e previdenciária (EC 103/19).',
+      'Regulamentação e direitos plenos aos trabalhadores de plataformas digitais e aplicativos.'
+    ],
+    excerpt: 'Redução da jornada máxima de trabalho sem redução de salários pelo fim da escala 6x1, revogação das reformas trabalhista e previdenciária e fortalecimento sindical de base.',
+    document_url: 'https://divulgacandcontas.tse.jus.br',
+    page_number: 14,
+    reviewed_at: '2026-09-14T15:00:00Z'
   }
 ];

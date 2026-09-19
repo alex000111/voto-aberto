@@ -128,6 +128,22 @@ export const localCandidates = [
     source_updated_at: '2026-09-16T15:30:00Z',
     active: true
   },
+  {
+    id: 'cand-pe-dep-03',
+    election_year: 2026,
+    scope: 'PE',
+    office: 'DEPUTADO FEDERAL',
+    ballot_name: 'Jones Manoel',
+    full_name: 'Jones Manoel da Silva',
+    party: 'PCB',
+    number: '2121',
+    registration_status: 'DEFERIDO',
+    uf: 'PE',
+    city: null,
+    source_id: 'tse-candidatos-2026',
+    source_updated_at: '2026-09-16T15:30:00Z',
+    active: true
+  },
 
   // --- BRASIL / PRESIDÊNCIA (BR) ---
   {
@@ -858,6 +874,26 @@ export const localProposals = [
     document_url: 'https://divulgacandcontas.tse.jus.br',
     page_number: 22,
     reviewed_at: '2026-09-14T14:00:00Z',
+    source_id: 'tse-candidatos-2026'
+  },
+  {
+    id: 'prop-pe-03-edu',
+    candidate_id: 'cand-pe-dep-03',
+    topic: 'Educação',
+    excerpt: 'Revogação integral do Novo Ensino Médio, destinação de 10% do PIB para a educação pública e valorização do piso salarial dos professores com dedicação exclusiva.',
+    document_url: 'https://divulgacandcontas.tse.jus.br',
+    page_number: 8,
+    reviewed_at: '2026-09-14T14:00:00Z',
+    source_id: 'tse-candidatos-2026'
+  },
+  {
+    id: 'prop-pe-03-tra',
+    candidate_id: 'cand-pe-dep-03',
+    topic: 'Trabalho e Renda',
+    excerpt: 'Redução da jornada máxima de trabalho sem redução de salários pelo fim da escala 6x1, revogação das reformas trabalhista e previdenciária e fortalecimento sindical de base.',
+    document_url: 'https://divulgacandcontas.tse.jus.br',
+    page_number: 14,
+    reviewed_at: '2026-09-14T15:00:00Z',
     source_id: 'tse-candidatos-2026'
   }
 ];
