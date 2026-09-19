@@ -175,6 +175,59 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* Citação Matrix — Manifesto Cívico */}
+      <div style={{
+        margin: '68px 0 0',
+        padding: '48px 40px',
+        background: 'rgba(0, 0, 0, 0.55)',
+        border: '1px solid rgba(16, 185, 129, 0.3)',
+        borderLeft: '4px solid #10b981',
+        borderRadius: '16px',
+        backdropFilter: 'blur(8px)',
+        position: 'relative',
+        overflow: 'hidden',
+      }}>
+        {/* Detalhe decorativo de canto */}
+        <div style={{
+          position: 'absolute', top: 0, right: 0,
+          width: '180px', height: '180px',
+          background: 'radial-gradient(circle at top right, rgba(16,185,129,0.15) 0%, transparent 70%)',
+          pointerEvents: 'none',
+        }} />
+        <p style={{
+          fontFamily: '"Courier New", Courier, monospace',
+          color: '#34d399',
+          fontSize: 'clamp(15px, 2vw, 19px)',
+          lineHeight: 1.85,
+          fontStyle: 'italic',
+          margin: '0 0 28px',
+          maxWidth: '900px',
+        }}>
+          &ldquo;Vou desligar o telefone e mostrar às pessoas o que vocês não querem que elas vejam.
+          Vou mostrar a elas um mundo sem vocês. Um mundo sem regras ou controles,
+          sem fronteiras ou limites. Um mundo onde tudo é possível.
+          O que acontecerá depois? A decisão fica com vocês.&rdquo;
+        </p>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <span style={{
+            display: 'inline-block',
+            width: '32px', height: '2px',
+            background: '#10b981',
+          }} />
+          <span style={{
+            fontFamily: '"Courier New", Courier, monospace',
+            color: '#6ee7b7',
+            fontSize: '13px',
+            fontWeight: 700,
+            letterSpacing: '1.5px',
+            textTransform: 'uppercase',
+          }}>
+            Neo — Matrix (1999) · Informação é poder. Use com responsabilidade.
+          </span>
+        </div>
+      </div>
     </main>
+
   );
 }
