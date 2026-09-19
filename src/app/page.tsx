@@ -180,12 +180,13 @@ export default function Home() {
       <div style={{
         margin: '68px 0 0',
         padding: '48px 40px',
-        background: 'rgba(0, 0, 0, 0.55)',
-        border: '1px solid rgba(16, 185, 129, 0.3)',
+        background: 'rgba(4, 8, 16, 0.92)',
+        border: '1px solid rgba(16, 185, 129, 0.4)',
         borderLeft: '4px solid #10b981',
         borderRadius: '16px',
         backdropFilter: 'blur(8px)',
         position: 'relative',
+        zIndex: 1,
         overflow: 'hidden',
       }}>
         {/* Detalhe decorativo de canto */}
