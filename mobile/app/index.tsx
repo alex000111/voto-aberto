@@ -1,4 +1,4 @@
-﻿import { Link } from 'expo-router';
+import { Link } from 'expo-router';
 import { SafeAreaView, ScrollView, Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 
 const modules = [
@@ -31,6 +31,17 @@ const modules = [
     description: 'Metodologia aberta, neutralidade estrita e rastreabilidade de evidências.',
     href: '/sobre',
     tag: 'TRANSPARÊNCIA'
+  {
+    title: 'Radar Anti-Fake News',
+    description: 'Verificação em tempo real de notícias falsas e checagem de fatos com IA.',
+    href: '/checagem',
+    tag: '🛡️ SEGURANÇA DA INFORMAÇÃO'
+  },
+  {
+    title: 'Propostas e Resumos',
+    description: 'Resumos inteligentes de planos de governo gerados por IA para leitura rápida.',
+    href: '/propostas',
+    tag: '💡 ASSISTENTE CÍVICO'
   }
 ];
 

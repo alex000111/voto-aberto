@@ -23,7 +23,11 @@
     "next": "^15.5.25",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
+    "react-tsparticles": "^2.12.2",
     "tesseract.js": "^7.0.0",
+    "tsparticles": "^4.4.0",
+    "tsparticles-engine": "^2.12.0",
+    "tsparticles-slim": "^2.12.0",
     "yauzl": "^3.4.0"
   },
   "devDependencies": {

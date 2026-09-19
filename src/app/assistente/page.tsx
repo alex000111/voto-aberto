@@ -77,8 +77,8 @@ export default async function Page({
                 padding: '6px 12px',
                 borderRadius: '99px',
                 border: '1px solid var(--line)',
-                background: isActive ? 'var(--blue)' : '#fff',
-                color: isActive ? '#fff' : 'inherit',
+                background: isActive ? 'var(--blue)' : 'var(--surface)',
+                color: isActive ? '#fff' : 'var(--ink)',
                 fontWeight: 600,
                 textDecoration: 'none'
               }}
@@ -124,7 +124,7 @@ export default async function Page({
               <article
                 key={item.id}
                 style={{
-                  background: '#fff',
+                  background: 'var(--surface)',
                   border: '1px solid var(--line)',
                   borderRadius: '14px',
                   padding: '24px',
@@ -135,7 +135,7 @@ export default async function Page({
               >
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '8px' }}>
                   <div>
-                    <span className="status" style={{ background: '#e0e7ff', color: '#3730a3', fontSize: '11px', textTransform: 'uppercase', marginRight: '8px' }}>
+                    <span className="status" style={{ background: 'var(--blue-subtle)', color: 'var(--blue)', fontSize: '11px', textTransform: 'uppercase', marginRight: '8px' }}>
                       {item.topic}
                     </span>
                     <strong style={{ fontSize: '15px', color: 'var(--ink)' }}>
@@ -151,12 +151,12 @@ export default async function Page({
                   style={{
                     margin: '8px 0',
                     padding: '14px 18px',
-                    background: '#f8fafc',
+                    background: 'var(--surface-alt)',
                     borderLeft: '4px solid var(--blue)',
                     borderRadius: '0 8px 8px 0',
                     fontSize: '15px',
                     lineHeight: 1.6,
-                    color: '#1e293b'
+                    color: 'var(--ink-light)'
                   }}
                 >
                   “{item.excerpt}”

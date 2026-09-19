@@ -1,7 +1,8 @@
 import Link from 'next/link';
+import Script from 'next/script';
 import './globals.css';
 import Header from '../components/Header';
-
+import ParticlesBackground from '../components/ParticlesBackground';
 export const metadata = {
   title: 'Voto Aberto — Observatório Eleitoral e Dados Oficiais • Brasil 2026',
   description: 'Observatório público de dados eleitorais com fontes rastreáveis do TSE, IBGE e órgãos oficiais. Sem ranking nem recomendação de voto.',
@@ -15,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body>
+        <ParticlesBackground />
         <a className="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
         <Header />
         <div id="conteudo">
@@ -66,6 +68,18 @@ export default function RootLayout({
             <span>Art. 1º, parágrafo único da CF/88: Todo o poder emana do povo • Dados Públicos Abertos</span>
           </div>
         </footer>
+
+        {/* VLibras Widget para acessibilidade em Libras */}
+        <div vw="true" className="enabled">
+          <div vw-access-button="true" className="active"></div>
+          <div vw-plugin-wrapper="true">
+            <div className="vw-plugin-top-wrapper"></div>
+          </div>
+        </div>
+        <Script src="https://vlibras.gov.br/app/vlibras-plugin.js" strategy="lazyOnload" />
+        <Script id="vlibras-init" strategy="lazyOnload">
+          {`new window.VLibras.Widget('https://vlibras.gov.br/app');`}
+        </Script>
       </body>
     </html>
   );

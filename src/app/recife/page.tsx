@@ -31,8 +31,8 @@ export default async function Page({
               padding: '8px 16px',
               borderRadius: '99px',
               border: '1px solid var(--line)',
-              background: t.slug === currentTopic.slug ? 'var(--blue)' : '#fff',
-              color: t.slug === currentTopic.slug ? '#fff' : 'inherit',
+              background: t.slug === currentTopic.slug ? 'var(--blue)' : 'var(--surface)',
+              color: t.slug === currentTopic.slug ? '#fff' : 'var(--ink)',
               fontWeight: 700,
               fontSize: '13px',
               transition: '0.15s'
@@ -44,11 +44,11 @@ export default async function Page({
       </div>
 
       {/* Painel do Tema Selecionado */}
-      <section style={{ background: '#fff', border: '1px solid var(--line)', borderRadius: '18px', padding: '28px', marginBottom: '32px' }}>
+      <section style={{ background: 'var(--surface)', border: '1px solid var(--line)', borderRadius: '18px', padding: '28px', marginBottom: '32px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '12px' }}>
           <div>
             <span className="tag" style={{ color: 'var(--blue)', fontWeight: 800, fontSize: '12px' }}>TEMA EM DESTAQUE</span>
-            <h2 style={{ fontSize: '30px', margin: '6px 0 10px', letterSpacing: '-1px' }}>{currentTopic.title}</h2>
+            <h2 style={{ fontSize: '30px', margin: '6px 0 10px', letterSpacing: '-1px', color: 'var(--ink)' }}>{currentTopic.title}</h2>
             <p style={{ color: 'var(--muted)', margin: 0, maxWidth: '750px', fontSize: '15px' }}>{currentTopic.description}</p>
           </div>
           <Link href="/comparador" className="btn secondary" style={{ fontSize: '13px', padding: '9px 14px' }}>
@@ -57,7 +57,7 @@ export default async function Page({
         </div>
 
         {/* Indicadores */}
-        <h3 style={{ fontSize: '17px', margin: '28px 0 14px', letterSpacing: '-0.5px' }}>Indicadores Oficiais</h3>
+        <h3 style={{ fontSize: '17px', margin: '28px 0 14px', letterSpacing: '-0.5px', color: 'var(--ink)' }}>Indicadores Oficiais</h3>
         <div className="metricGrid" style={{ margin: '0 0 24px' }}>
           {currentTopic.indicators.map(ind => (
             <div className="metric" key={ind.id}>
@@ -72,21 +72,21 @@ export default async function Page({
         </div>
 
         {/* Matriz de Competências Constitucionais */}
-        <h3 style={{ fontSize: '17px', margin: '32px 0 14px', letterSpacing: '-0.5px' }}>
+        <h3 style={{ fontSize: '17px', margin: '32px 0 14px', letterSpacing: '-0.5px', color: 'var(--ink)' }}>
           Quem faz o quê? (Competências Constitucionais)
         </h3>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '14px' }}>
-          <div style={{ background: '#f8fafc', border: '1px solid var(--line)', borderRadius: '12px', padding: '16px' }}>
+          <div style={{ background: 'var(--surface-alt)', border: '1px solid var(--line)', borderRadius: '12px', padding: '16px' }}>
             <div style={{ fontWeight: 800, color: 'var(--blue)', fontSize: '12px', marginBottom: '6px' }}>MUNICÍPIO (Prefeitura e Câmara)</div>
-            <p style={{ margin: 0, fontSize: '13px', lineHeight: 1.5, color: '#334155' }}>{currentTopic.competency.municipalRole}</p>
+            <p style={{ margin: 0, fontSize: '13px', lineHeight: 1.5, color: 'var(--ink-light)' }}>{currentTopic.competency.municipalRole}</p>
           </div>
-          <div style={{ background: '#f8fafc', border: '1px solid var(--line)', borderRadius: '12px', padding: '16px' }}>
-            <div style={{ fontWeight: 800, color: '#0f766e', fontSize: '12px', marginBottom: '6px' }}>ESTADO (Governo e ALEPE)</div>
-            <p style={{ margin: 0, fontSize: '13px', lineHeight: 1.5, color: '#334155' }}>{currentTopic.competency.stateRole}</p>
+          <div style={{ background: 'var(--surface-alt)', border: '1px solid var(--line)', borderRadius: '12px', padding: '16px' }}>
+            <div style={{ fontWeight: 800, color: 'var(--emerald)', fontSize: '12px', marginBottom: '6px' }}>ESTADO (Governo e ALEPE)</div>
+            <p style={{ margin: 0, fontSize: '13px', lineHeight: 1.5, color: 'var(--ink-light)' }}>{currentTopic.competency.stateRole}</p>
           </div>
-          <div style={{ background: '#f8fafc', border: '1px solid var(--line)', borderRadius: '12px', padding: '16px' }}>
-            <div style={{ fontWeight: 800, color: '#475569', fontSize: '12px', marginBottom: '6px' }}>UNIÃO (Governo Federal e Congresso)</div>
-            <p style={{ margin: 0, fontSize: '13px', lineHeight: 1.5, color: '#334155' }}>{currentTopic.competency.federalRole}</p>
+          <div style={{ background: 'var(--surface-alt)', border: '1px solid var(--line)', borderRadius: '12px', padding: '16px' }}>
+            <div style={{ fontWeight: 800, color: 'var(--muted)', fontSize: '12px', marginBottom: '6px' }}>UNIÃO (Governo Federal e Congresso)</div>
+            <p style={{ margin: 0, fontSize: '13px', lineHeight: 1.5, color: 'var(--ink-light)' }}>{currentTopic.competency.federalRole}</p>
           </div>
         </div>
         <p style={{ fontSize: '11px', color: 'var(--muted)', marginTop: '10px' }}>
@@ -94,11 +94,11 @@ export default async function Page({
         </p>
 
         {/* Questões-chave */}
-        <div style={{ marginTop: '24px', background: '#eff6ff', border: '1px solid #bfdbfe', borderRadius: '12px', padding: '18px' }}>
-          <strong style={{ display: 'block', fontSize: '13px', color: '#1e40af', marginBottom: '8px' }}>
+        <div style={{ marginTop: '24px', background: 'var(--blue-subtle)', border: '1px solid var(--blue)', borderRadius: '12px', padding: '18px' }}>
+          <strong style={{ display: 'block', fontSize: '13px', color: 'var(--blue)', marginBottom: '8px' }}>
             PERGUNTAS PARA CHECAR NOS PLANOS DE GOVERNO
           </strong>
-          <ul style={{ margin: 0, paddingLeft: '20px', fontSize: '13px', lineHeight: 1.6, color: '#1e3a8a' }}>
+          <ul style={{ margin: 0, paddingLeft: '20px', fontSize: '13px', lineHeight: 1.6, color: 'var(--ink)' }}>
             {currentTopic.keyQuestions.map((q, idx) => (
               <li key={idx}>{q}</li>
             ))}
