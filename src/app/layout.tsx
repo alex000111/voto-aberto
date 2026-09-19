@@ -1,9 +1,9 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import './globals.css';
 import Header from '../components/Header';
 
 export const metadata = {
-  title: 'Voto Aberto — Observatório Eleitoral e Dados Oficiais 2026',
+  title: 'Voto Aberto — Observatório Eleitoral e Dados Oficiais • Brasil 2026',
   description: 'Observatório público de dados eleitorais com fontes rastreáveis do TSE, IBGE e órgãos oficiais. Sem ranking nem recomendação de voto.',
 };
 
@@ -20,23 +20,30 @@ export default function RootLayout({
         <div id="conteudo">
           {children}
         </div>
+
+        {/* Faixa Tricolor Cívica no Rodapé */}
+        <div className="civic-ribbon" aria-hidden="true" />
+
         <footer>
           <div className="footer-content">
             <div className="footer-brand">
-              <h4>Voto Aberto • Observatório Cívico 2026</h4>
+              <h4>🇧🇷 Voto Aberto • Observatório Cívico Nacional 2026</h4>
               <p>
-                Iniciativa cívica independente e apartidária dedicada à transparência eleitoral.
+                Iniciativa cívica independente e apartidária dedicada à transparência eleitoral e ao controle social.
                 Todos os dados são coletados diretamente das bases abertas do Tribunal Superior Eleitoral (TSE)
-                e demais fontes governamentais primárias. Não pontuamos candidaturas nem emitimos recomendações de voto.
+                e órgãos governamentais sob as diretrizes da Lei de Acesso à Informação (Lei 12.527/2011) e do Art. 37 da Constituição Federal.
+                Não ranqueamos candidaturas nem emitimos recomendação de voto.
               </p>
             </div>
 
             <div className="footer-col">
               <h5>Módulos de Consulta</h5>
               <ul>
-                <li><Link href="/candidaturas">Candidaturas e Perfis</Link></li>
-                <li><Link href="/comparador">Comparador de Propostas</Link></li>
-                <li><Link href="/pesquisas">Pesquisas Eleitorais</Link></li>
+                <li><Link href="/candidaturas">Candidaturas e Perfis (20.984)</Link></li>
+                <li><Link href="/propostas">Propostas com Resumos</Link></li>
+                <li><Link href="/comparador">Comparador de Diretrizes</Link></li>
+                <li><Link href="/checagem">🛡️ Radar Anti-Fake News</Link></li>
+                <li><Link href="/pesquisas">Pesquisas (PesqEle)</Link></li>
                 <li><Link href="/financiamento">Finanças de Campanha</Link></li>
                 <li><Link href="/recife">Recife e Federalismo</Link></li>
                 <li><Link href="/assistente">Assistente Cívico</Link></li>
@@ -55,8 +62,8 @@ export default function RootLayout({
           </div>
 
           <div className="footer-bottom">
-            <span>Fonte antes de opinião. Informação verificável. Decisão é sua.</span>
-            <span>Eleições Gerais de 2026 • Dados Públicos sob Licença Aberta</span>
+            <span>🇧🇷 República Federativa do Brasil • 26 Estados e Distrito Federal</span>
+            <span>Art. 1º, parágrafo único da CF/88: Todo o poder emana do povo • Dados Públicos Abertos</span>
           </div>
         </footer>
       </body>

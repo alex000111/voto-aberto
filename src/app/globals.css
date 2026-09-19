@@ -1,9 +1,9 @@
 :root {
   --font-scale: 1;
-  --bg: #ffffff;
+  --bg: #f8fafc;
   --surface: #ffffff;
-  --surface-alt: #f8fafc;
-  --surface-subtle: #f1f5f9;
+  --surface-alt: #f1f5f9;
+  --surface-subtle: #e2e8f0;
   --ink: #0f172a;
   --ink-light: #334155;
   --muted: #64748b;
@@ -16,35 +16,61 @@
   --emerald-subtle: #ecfdf5;
   --amber: #b45309;
   --amber-subtle: #fffbeb;
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
+
+  /* Identidade Cívica do Brasil */
+  --br-green: #00875a;
+  --br-green-light: #10b981;
+  --br-green-subtle: rgba(0, 135, 90, 0.1);
+  --br-yellow: #f59e0b;
+  --br-yellow-light: #fbbf24;
+  --br-yellow-subtle: rgba(245, 158, 11, 0.12);
+  --br-blue: #0f4c81;
+  --br-blue-light: #1d4ed8;
+  --br-blue-subtle: rgba(15, 76, 129, 0.1);
+  --br-ribbon: linear-gradient(90deg, #00875a 0%, #10b981 33%, #f59e0b 66%, #1d4ed8 100%);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
   --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.05), 0 1px 2px -1px rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.04);
+  --shadow-md: 0 4px 8px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  --shadow-lg: 0 12px 24px -4px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.04);
 }
 
 /* Dark Mode */
 [data-theme="dark"] {
-  --bg: #090e17;
-  --surface: #111a28;
-  --surface-alt: #162234;
-  --surface-subtle: #1e2c44;
+  --bg: #070d18;
+  --surface: #0f172a;
+  --surface-alt: #142035;
+  --surface-subtle: #1b2c48;
   --ink: #f8fafc;
   --ink-light: #cbd5e1;
   --muted: #94a3b8;
-  --line: #223249;
-  --line-strong: #334a6c;
-  --blue: #3b82f6;
+  --line: #1e2f47;
+  --line-strong: #2c4468;
+  --blue: #38bdf8;
   --blue-hover: #60a5fa;
-  --blue-subtle: rgba(59, 130, 246, 0.16);
-  --emerald: #10b981;
-  --emerald-subtle: rgba(16, 185, 129, 0.16);
-  --amber: #f59e0b;
-  --amber-subtle: rgba(245, 158, 11, 0.16);
-  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.4);
-  --shadow-md: 0 4px 8px -1px rgb(0 0 0 / 0.5);
-  --shadow-lg: 0 10px 18px -3px rgb(0 0 0 / 0.6);
+  --blue-subtle: rgba(56, 189, 248, 0.14);
+  --emerald: #34d399;
+  --emerald-subtle: rgba(52, 211, 153, 0.14);
+  --amber: #fbbf24;
+  --amber-subtle: rgba(251, 191, 36, 0.14);
+
+  /* Identidade Cívica no Dark Mode */
+  --br-green: #34d399;
+  --br-green-light: #6ee7b7;
+  --br-green-subtle: rgba(52, 211, 153, 0.15);
+  --br-yellow: #fbbf24;
+  --br-yellow-light: #fde047;
+  --br-yellow-subtle: rgba(251, 191, 36, 0.15);
+  --br-blue: #38bdf8;
+  --br-blue-light: #60a5fa;
+  --br-blue-subtle: rgba(56, 189, 248, 0.15);
+  --br-ribbon: linear-gradient(90deg, #10b981 0%, #34d399 33%, #fbbf24 66%, #38bdf8 100%);
+
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.5);
+  --shadow-md: 0 6px 12px -2px rgb(0 0 0 / 0.6);
+  --shadow-lg: 0 14px 28px -4px rgb(0 0 0 / 0.7);
 }
 
 /* Escalas de Acessibilidade de Fonte */
@@ -82,6 +108,11 @@
 body {
   margin: 0;
   background: var(--bg);
+  background-image:
+    radial-gradient(at 0% 0%, rgba(0, 135, 90, 0.05) 0px, transparent 55%),
+    radial-gradient(at 100% 0%, rgba(29, 78, 216, 0.06) 0px, transparent 55%),
+    radial-gradient(at 50% 100%, rgba(245, 158, 11, 0.04) 0px, transparent 55%);
+  background-attachment: fixed;
   color: var(--ink);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: calc(15px * var(--font-scale));
@@ -91,9 +122,27 @@ body {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+[data-theme="dark"] body {
+  background-image:
+    radial-gradient(at 0% 0%, rgba(5, 150, 105, 0.12) 0px, transparent 60%),
+    radial-gradient(at 100% 0%, rgba(37, 99, 235, 0.15) 0px, transparent 60%),
+    radial-gradient(at 50% 100%, rgba(245, 158, 11, 0.08) 0px, transparent 60%);
+}
+
+[data-contrast="high"] body {
+  background-image: none !important;
+}
+
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* Faixa Tricolor Nacional */
+.civic-ribbon {
+  height: 4px;
+  background: var(--br-ribbon);
+  width: 100%;
 }
 
 /* Focus Visible WCAG */
@@ -121,7 +170,7 @@ a {
 
 /* Faixa superior cívica */
 .topbar-civic {
-  background: #0f172a;
+  background: #09101d;
   color: #94a3b8;
   font-size: calc(11px * var(--font-scale));
   font-weight: 700;
@@ -153,8 +202,9 @@ a {
 
 /* Header principal */
 header {
-  min-height: 74px;
+  min-height: 76px;
   background: var(--surface);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
   display: flex;
   align-items: center;
@@ -170,31 +220,33 @@ header {
 .brand-wrapper {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
 }
 
 .brand-logo-icon {
-  width: 34px;
-  height: 34px;
-  background: linear-gradient(135deg, #1d4ed8 0%, #0f172a 100%);
-  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #00875a 0%, #0f4c81 50%, #1d4ed8 100%);
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
   font-weight: 900;
-  font-size: 18px;
-  box-shadow: 0 2px 6px rgba(29, 78, 216, 0.35);
+  font-size: 20px;
+  box-shadow: 0 4px 12px rgba(0, 135, 90, 0.35);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  position: relative;
 }
 
 .brand {
-  font-size: calc(22px * var(--font-scale));
+  font-size: calc(23px * var(--font-scale));
   font-weight: 900;
   letter-spacing: -0.8px;
   color: var(--ink);
   display: flex;
   align-items: baseline;
-  gap: 5px;
+  gap: 6px;
 }
 
 .brand span {
@@ -203,13 +255,17 @@ header {
 
 .brand small {
   font-size: 11px;
-  font-weight: 700;
-  color: var(--muted);
-  letter-spacing: 0.5px;
+  font-weight: 800;
+  color: var(--br-green);
+  letter-spacing: 0.8px;
   margin-left: 6px;
-  background: var(--surface-subtle);
+  background: var(--br-green-subtle);
   padding: 3px 8px;
-  border-radius: 4px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 135, 90, 0.25);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
 
 nav {
@@ -328,7 +384,9 @@ main {
 
 .hero h1 em {
   font-style: normal;
-  color: var(--blue);
+  background: linear-gradient(135deg, var(--br-green) 0%, var(--blue) 50%, var(--br-yellow) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero p {
@@ -351,52 +409,72 @@ main {
   justify-content: center;
   padding: 13px 22px;
   border-radius: var(--radius-md);
-  background: var(--blue);
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
   color: #ffffff;
   font-weight: 750;
   font-size: calc(14px * var(--font-scale));
-  border: 1px solid transparent;
-  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 3px 10px rgba(29, 78, 216, 0.25);
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: all 0.2s ease;
 }
 
 .btn:hover {
-  background: var(--blue-hover);
-  box-shadow: var(--shadow-md);
-  transform: translateY(-1px);
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  box-shadow: 0 6px 18px rgba(29, 78, 216, 0.35);
+  transform: translateY(-2px);
 }
 
 .btn.secondary {
   background: var(--surface);
   color: var(--ink);
   border: 1px solid var(--line-strong);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn.secondary:hover {
   background: var(--surface-alt);
+  border-color: var(--blue);
+  transform: translateY(-2px);
 }
 
-/* Painel de Princípio Cívico */
+/* Painel de Princípio Cívico & Constituição Cidadã */
 .trust {
-  background: var(--surface-alt);
+  background: var(--surface);
   color: var(--ink);
   border-radius: 20px;
   padding: 34px 30px;
   box-shadow: var(--shadow-md);
   border: 1px solid var(--line);
+  border-top: 4px solid var(--br-green);
+  position: relative;
+  overflow: hidden;
+}
+
+.trust::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, rgba(0, 135, 90, 0.12) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .trust small {
-  color: var(--muted);
+  color: var(--br-green);
   font-weight: 800;
   font-size: 11px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .trust strong {
-  font-size: calc(34px * var(--font-scale));
+  font-size: calc(32px * var(--font-scale));
   line-height: 1.15;
   letter-spacing: -1px;
   display: block;
@@ -405,9 +483,9 @@ main {
 }
 
 .trust p {
-  color: var(--muted);
-  font-size: calc(15px * var(--font-scale));
-  line-height: 1.6;
+  color: var(--ink-light);
+  font-size: calc(14.5px * var(--font-scale));
+  line-height: 1.65;
   margin: 0 0 22px;
 }
 
@@ -417,21 +495,25 @@ main {
   border: 1px solid var(--emerald);
   font-size: 11px;
   font-weight: 800;
-  padding: 6px 12px;
+  padding: 6px 14px;
   border-radius: 99px;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
-/* Fita de Métricas */
+/* Fita de Métricas Cívicas */
 .stats-ribbon {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   padding: 28px;
-  background: var(--surface-alt);
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   margin: 44px 0;
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--br-yellow);
 }
 
 .stat-item {
@@ -461,7 +543,7 @@ main {
   background: var(--blue-subtle);
   border: 1px solid var(--blue);
   color: var(--ink);
-  padding: 16px 20px;
+  padding: 18px 22px;
   border-radius: var(--radius-md);
   font-size: calc(14px * var(--font-scale));
   margin: 32px 0;
@@ -505,13 +587,31 @@ main {
   justify-content: space-between;
   min-height: 200px;
   box-shadow: var(--shadow-sm);
-  transition: all 0.2s ease;
+  transition: all 0.22s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--br-ribbon);
+  opacity: 0;
+  transition: opacity 0.22s ease;
 }
 
 .card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   border-color: var(--line-strong);
   box-shadow: var(--shadow-md);
+}
+
+.card:hover::before {
+  opacity: 1;
 }
 
 .card .tag {
