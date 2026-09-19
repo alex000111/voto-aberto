@@ -31,17 +31,16 @@ export default function ParticlesBackground() {
               direction: 'bottom', 
               enable: true, 
               outModes: { default: 'out' }, 
-              random: false, 
-              speed: 2, 
+              speed: 1.5, 
               straight: true 
             },
-            number: { value: 100 },
+            number: { density: { enable: true }, value: 80 },
             opacity: { 
               value: 0.5
             },
             shape: { type: 'circle' },
             size: { 
-              value: { min: 1, max: 3 }
+              value: 2
             },
           },
           detectRetina: true,
