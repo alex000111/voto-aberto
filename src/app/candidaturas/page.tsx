@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { dbConfigured, dbSelect } from '@/lib/supabase-rest';
 import { candidateQuery, UFS, UF_NAMES, OFFICES } from '@/lib/candidate-query';
 import DataNotice from '@/components/DataNotice';
+import CandidatePhoto from '@/components/CandidatePhoto';
 import type { Candidate } from '@/lib/candidates';
 
 export const dynamic = 'force-dynamic';
@@ -106,7 +107,13 @@ export default async function Page({
           <div className="candidateGrid">
             {candidates.map(c => (
               <Link className="candidateCard" href={`/candidaturas/${encodeURIComponent(c.id)}`} key={c.id}>
-                <div>
+                <CandidatePhoto
+                  sourceId={c.source_id}
+                  uf={c.uf}
+                  name={c.ballot_name}
+                  size={72}
+                />
+                <div style={{ flex: 1, minWidth: 0 }}>
                   <span className="office">{c.office}</span>
                   <h2>{c.ballot_name}</h2>
                   <p>{c.full_name}</p>
