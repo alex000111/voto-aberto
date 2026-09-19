@@ -8,39 +8,44 @@ export default function ParticlesBackground() {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
+    console.log('Iniciando partículas...');
     initParticlesEngine(async (engine) => {
+      console.log('Engine injetada, carregando slim...');
       // carrega apenas os recursos essenciais do tsparticles para performance
       await loadSlim(engine);
     }).then(() => {
+      console.log('Slim carregado com sucesso! Alterando init para true.');
       setInit(true);
+    }).catch((err) => {
+      console.error('Erro ao carregar partículas:', err);
     });
   }, []);
 
   if (!init) return null;
 
   return (
-    <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0, pointerEvents: 'none' }}>
+    <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: 9999, pointerEvents: 'none' }}>
       <Particles
         id="tsparticles"
         options={{
           background: { color: { value: 'transparent' } },
           fpsLimit: 60,
           particles: {
-            color: { value: ['#00875a', '#fbbf24', '#1d4ed8'] },
+            color: { value: '#ff0000' },
             move: { 
-              direction: 'bottom', 
+              direction: 'none', 
               enable: true, 
-              outModes: { default: 'out' }, 
-              speed: 1.5, 
-              straight: true 
+              outModes: { default: 'bounce' }, 
+              speed: 5, 
+              straight: false 
             },
-            number: { density: { enable: true, width: 1920, height: 1080 }, value: 120 },
+            number: { value: 50 },
             opacity: { 
-              value: 0.5
+              value: 1
             },
             shape: { type: 'circle' },
             size: { 
-              value: 2
+              value: 15
             },
           },
           detectRetina: true,
