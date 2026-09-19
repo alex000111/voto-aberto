@@ -70,11 +70,8 @@ export default function RootLayout({
         </footer>
 
         {/* VLibras Widget para acessibilidade em Libras */}
-        {/* @ts-ignore - vw attributes are required by VLibras */}
         <div vw="true" className="enabled">
-          {/* @ts-ignore */}
           <div vw-access-button="true" className="active"></div>
-          {/* @ts-ignore */}
           <div vw-plugin-wrapper="true">
             <div className="vw-plugin-top-wrapper"></div>
           </div>
