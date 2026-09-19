@@ -34,7 +34,7 @@ export default function ParticlesBackground() {
               speed: 1.5, 
               straight: true 
             },
-            number: { density: { enable: true }, value: 80 },
+            number: { density: { enable: true, width: 1920, height: 1080 }, value: 120 },
             opacity: { 
               value: 0.5
             },
