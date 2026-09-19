@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Script from 'next/script';
 import './globals.css';
 import Header from '../components/Header';
-import ParticlesBackground from '../components/ParticlesBackground';
+import MatrixRain from '../components/ParticlesBackground';
 export const metadata = {
   title: 'Voto Aberto — Observatório Eleitoral e Dados Oficiais • Brasil 2026',
   description: 'Observatório público de dados eleitorais com fontes rastreáveis do TSE, IBGE e órgãos oficiais. Sem ranking nem recomendação de voto.',
@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body>
-        <ParticlesBackground />
+        <MatrixRain />
         <a className="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
         <Header />
         <div id="conteudo">
