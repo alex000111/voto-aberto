@@ -37,15 +37,11 @@ export default function ParticlesBackground() {
             },
             number: { density: { enable: true }, value: 80 },
             opacity: { 
-              value: 0.5,
-              random: true,
-              animation: { enable: true, speed: 1, minimumValue: 0.1, sync: false }
+              value: 0.5
             },
             shape: { type: 'circle' },
             size: { 
-              value: { min: 1, max: 3 },
-              random: true,
-              animation: { enable: true, speed: 2, minimumValue: 0.1, sync: false }
+              value: { min: 1, max: 3 }
             },
           },
           detectRetina: true,
