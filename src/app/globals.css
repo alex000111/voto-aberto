@@ -39,10 +39,10 @@
 
 /* Dark Mode */
 [data-theme="dark"] {
-  --bg: #070d18;
-  --surface: #0f172a;
-  --surface-alt: #142035;
-  --surface-subtle: #1b2c48;
+  --bg: #040810;
+  --surface: #0a1020;
+  --surface-alt: #0f1a2e;
+  --surface-subtle: #162338;
   --ink: #f8fafc;
   --ink-light: #cbd5e1;
   --muted: #94a3b8;
@@ -103,6 +103,23 @@
 
 * {
   box-sizing: border-box;
+}
+
+/* Garante que todo o conteúdo fica acima do canvas Matrix (z-index: 0) */
+header,
+footer,
+main,
+nav,
+.card,
+.trust,
+.stats-ribbon,
+.source,
+.filters,
+.candidateCard,
+.metric,
+.note {
+  position: relative;
+  z-index: 1;
 }
 
 body {
