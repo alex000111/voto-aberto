@@ -44,6 +44,9 @@ async function upsert(table, rows) {
 async function main() {
   console.log('Iniciando sincronização com o Supabase:', url);
 
+  // Limpar candidatos para remover os antigos e corrigir numeração
+  await fetch(`${url}/rest/v1/candidates?id=not.is.null`, { method: 'DELETE', headers: { apikey: key } });
+  
   const sources = [
     { id: 'tse-candidatos-2026', name: 'TSE — Candidatos 2026', url: 'https://dadosabertos.tse.jus.br/dataset/candidatos-2026', authority: 'Tribunal Superior Eleitoral', status: 'ok' },
     { id: 'tse-pesqele-2026', name: 'TSE — PesqEle', url: 'https://divulgacandcontas.tse.jus.br', authority: 'Tribunal Superior Eleitoral', status: 'ok' },

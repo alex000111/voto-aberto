@@ -17,7 +17,7 @@ interface Props {
 const KNOWN_PHOTOS: Record<string, string> = {
   'Luiz Inácio Lula da Silva': 'https://divulgacandcontas.tse.jus.br/divulga/rest/arquivo/img/2040602022/280001607829/BR',
   'Tarcísio de Freitas': 'https://divulgacandcontas.tse.jus.br/divulga/rest/arquivo/img/2040602022/250001612497/SP',
-  'Guilherme Boulos': 'https://divulgacandcontas.tse.jus.br/divulga/rest/arquivo/img/2040602022/250001614742/SP',
+  'Guilherme Boulos': 'https://divulgacandcontas.tse.jus.br/divulga/rest/arquivo/img/2040602022/250001613761/SP',
   'Tabata Amaral': 'https://divulgacandcontas.tse.jus.br/divulga/rest/arquivo/img/2040602022/250001613271/SP',
   'Nikolas Ferreira': 'https://divulgacandcontas.tse.jus.br/divulga/rest/arquivo/img/2040602022/130001616492/MG',
   'Gleisi Hoffmann': 'https://divulgacandcontas.tse.jus.br/divulga/rest/arquivo/img/2040602022/160001606555/PR',
@@ -25,9 +25,15 @@ const KNOWN_PHOTOS: Record<string, string> = {
   'Jones Manoel': 'https://divulgacandcontas.tse.jus.br/divulga/rest/arquivo/img/2040602022/170001607787/PE',
   'André Ferreira': 'https://divulgacandcontas.tse.jus.br/divulga/rest/arquivo/img/2040602022/170001605333/PE',
   'Raquel Lyra': 'https://divulgacandcontas.tse.jus.br/divulga/rest/arquivo/img/2040602022/170001607831/PE',
-  'Marília Arraes': 'https://divulgacandcontas.tse.jus.br/divulga/rest/arquivo/img/2040602022/170001625902/PE',
-  'Eduardo Bolsonaro': 'https://divulgacandcontas.tse.jus.br/divulga/rest/arquivo/img/2040602022/250001613346/SP',
+  'Marília Arraes': 'https://divulgacandcontas.tse.jus.br/divulga/rest/arquivo/img/2040602022/170001610442/PE',
+  'Eduardo Bolsonaro': 'https://divulgacandcontas.tse.jus.br/divulga/rest/arquivo/img/2040602022/250001611374/SP',
+  'General Pazuello': 'https://divulgacandcontas.tse.jus.br/divulga/rest/arquivo/img/2040602022/190001596794/RJ',
   'João Campos': 'https://divulgacandcontas.tse.jus.br/divulga/rest/arquivo/img/2030402020/170000780283/PE',
+  'Anderson Ferreira': 'https://divulgacandcontas.tse.jus.br/divulga/rest/arquivo/img/2040602022/170001607759/PE',
+  'Felicio Ramuth': 'https://divulgacandcontas.tse.jus.br/divulga/rest/arquivo/img/2040602022/250001612498/SP',
+  'Alexandre Silveira': 'https://divulgacandcontas.tse.jus.br/divulga/rest/arquivo/img/2040602022/130001614264/MG',
+  'Eduardo Paes': 'https://divulgacandcontas.tse.jus.br/divulga/rest/arquivo/img/2030402020/190000688286/RJ',
+  'Rodrigo Pacheco': 'https://divulgacandcontas.tse.jus.br/divulga/rest/arquivo/img/2022802018/130000604556/MG',
 };
 
 
