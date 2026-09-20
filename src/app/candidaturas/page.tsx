@@ -3,6 +3,7 @@ import { dbConfigured, dbSelect } from '@/lib/supabase-rest';
 import { candidateQuery, UFS, UF_NAMES, OFFICES } from '@/lib/candidate-query';
 import DataNotice from '@/components/DataNotice';
 import CandidatePhoto from '@/components/CandidatePhoto';
+import CandidateFilters from '@/components/CandidateFilters';
 import type { Candidate } from '@/lib/candidates';
 
 export const dynamic = 'force-dynamic';
@@ -53,41 +54,14 @@ export default async function Page({
       </p>
 
       {/* Filtros */}
-      <form className="filters">
-        <label>
-          Nome na urna
-          <input name="q" defaultValue={q} maxLength={80} placeholder="Buscar por nome..." />
-        </label>
-
-        <label>
-          Colégio Eleitoral / UF
-          <select name="uf" defaultValue={uf}>
-            <option value="">Todas as UFs cadastradas</option>
-            {UFS.map(x => (
-              <option key={x} value={x}>
-                {UF_NAMES[x] || x}
-              </option>
-            ))}
-          </select>
-        </label>
-
-        <label>
-          Cargo em disputa
-          <select name="cargo" defaultValue={cargo}>
-            <option value="">Todos os cargos</option>
-            {OFFICES.map(x => (
-              <option key={x} value={x}>
-                {x}
-              </option>
-            ))}
-          </select>
-        </label>
-
-        <button className="btn" type="submit">Filtrar</button>
-        <Link className="btn secondary" href="/candidaturas">
-          Limpar
-        </Link>
-      </form>
+      <CandidateFilters
+        q={q}
+        uf={uf}
+        cargo={cargo}
+        ufs={UFS}
+        ufNames={UF_NAMES}
+        offices={OFFICES}
+      />
 
       {invalid ? (
         <div className="note" role="alert">
