@@ -14,7 +14,9 @@
     "test": "tsx --test tests/*.test.ts",
     "ingest:polls": "tsx scripts/ingest-polls.mjs",
     "ingest:finance": "tsx scripts/ingest-finance.mjs",
-    "db:prepare": "node scripts/prepare-database.mjs"
+    "db:prepare": "node scripts/prepare-database.mjs",
+    "photos:import": "tsx scripts/import-candidate-photos.mjs",
+    "photos:history": "tsx scripts/import-historical-portraits.mjs"
   },
   "dependencies": {
     "@tsparticles/react": "^3.0.0",

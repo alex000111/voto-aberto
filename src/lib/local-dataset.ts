@@ -776,126 +776,102 @@ export const localFinanceRecords = [
 ];
 
 export const localProposals = [
-  {
-    id: 'prop-gov-01-edu',
-    candidate_id: 'cand-pe-gov-01',
-    topic: 'Educação',
-    excerpt: 'Ampliação do programa de escolas em tempo integral no interior e reestruturação da carreira docente.',
-    document_url: 'https://divulgacandcontas.tse.jus.br',
-    page_number: 12,
-    reviewed_at: '2026-09-10T12:00:00Z',
-    source_id: 'tse-candidatos-2026'
-  },
-  {
-    id: 'prop-gov-02-edu',
-    candidate_id: 'cand-pe-gov-02',
-    topic: 'Educação',
-    excerpt: 'Fortalecimento do pacto pela alfabetização na idade certa em parceria com todas as redes municipais.',
-    document_url: 'https://divulgacandcontas.tse.jus.br',
-    page_number: 16,
-    reviewed_at: '2026-09-10T14:00:00Z',
-    source_id: 'tse-candidatos-2026'
-  },
-  {
-    id: 'prop-gov-01-sau',
-    candidate_id: 'cand-pe-gov-01',
-    topic: 'Saúde',
-    excerpt: 'Reforma e modernização dos grandes hospitais estaduais da RMR e expansão das unidades de diagnóstico.',
-    document_url: 'https://divulgacandcontas.tse.jus.br',
-    page_number: 19,
-    reviewed_at: '2026-09-11T10:00:00Z',
-    source_id: 'tse-candidatos-2026'
-  },
-  {
-    id: 'prop-gov-02-sau',
-    candidate_id: 'cand-pe-gov-02',
-    topic: 'Saúde',
-    excerpt: 'Integração digital do prontuário do paciente e abertura de centros regionais de consultas especializadas.',
-    document_url: 'https://divulgacandcontas.tse.jus.br',
-    page_number: 24,
-    reviewed_at: '2026-09-11T15:00:00Z',
-    source_id: 'tse-candidatos-2026'
-  },
-  {
-    id: 'prop-gov-01-mob',
-    candidate_id: 'cand-pe-gov-01',
-    topic: 'Mobilidade Urbana',
-    excerpt: 'Retomada das obras viárias estruturadoras nas rodovias estaduais e requalificação dos eixos de integração.',
-    document_url: 'https://divulgacandcontas.tse.jus.br',
-    page_number: 28,
-    reviewed_at: '2026-09-12T11:00:00Z',
-    source_id: 'tse-candidatos-2026'
-  },
-  {
-    id: 'prop-gov-02-mob',
-    candidate_id: 'cand-pe-gov-02',
-    topic: 'Mobilidade Urbana',
-    excerpt: 'Implantação de tarifa integrada metropolitana e apoio à eletrificação progressiva da frota de transporte coletivo.',
-    document_url: 'https://divulgacandcontas.tse.jus.br',
-    page_number: 31,
-    reviewed_at: '2026-09-12T16:00:00Z',
-    source_id: 'tse-candidatos-2026'
-  },
-  {
-    id: 'prop-pres-01-edu',
-    candidate_id: 'cand-br-pres-01',
-    topic: 'Educação',
-    excerpt: 'Consolidação e expansão das bolsas permanência nas universidades federais e criação de novos institutos federais.',
-    document_url: 'https://divulgacandcontas.tse.jus.br',
-    page_number: 14,
-    reviewed_at: '2026-09-13T10:00:00Z',
-    source_id: 'tse-candidatos-2026'
-  },
-  {
-    id: 'prop-pres-02-edu',
-    candidate_id: 'cand-br-pres-02',
-    topic: 'Educação',
-    excerpt: 'Foco no ensino fundamental e técnico profissionalizante com incentivo ao modelo de parcerias e eficiência de gestão.',
-    document_url: 'https://divulgacandcontas.tse.jus.br',
-    page_number: 21,
-    reviewed_at: '2026-09-13T14:00:00Z',
-    source_id: 'tse-candidatos-2026'
-  },
-  {
-    id: 'prop-sp-01-eco',
-    candidate_id: 'cand-sp-gov-01',
-    topic: 'Emprego e Renda',
-    excerpt: 'Fomento a cooperativas populares, polos tecnológicos de inovação na periferia e programa estadual de primeiro emprego.',
-    document_url: 'https://divulgacandcontas.tse.jus.br',
-    page_number: 18,
-    reviewed_at: '2026-09-14T10:00:00Z',
-    source_id: 'tse-candidatos-2026'
-  },
-  {
-    id: 'prop-rj-01-seg',
-    candidate_id: 'cand-rj-gov-01',
-    topic: 'Segurança Cidadã',
-    excerpt: 'Integração de câmeras com reconhecimento facial e fortalecimento das Unidades de Ordem Pública em cooperação municipal.',
-    document_url: 'https://divulgacandcontas.tse.jus.br',
-    page_number: 22,
-    reviewed_at: '2026-09-14T14:00:00Z',
-    source_id: 'tse-candidatos-2026'
-  },
-  {
-    id: 'prop-pe-03-edu',
-    candidate_id: 'cand-pe-dep-03',
-    topic: 'Educação',
-    excerpt: 'Revogação integral do Novo Ensino Médio, destinação de 10% do PIB para a educação pública e valorização do piso salarial dos professores com dedicação exclusiva.',
-    document_url: 'https://divulgacandcontas.tse.jus.br',
-    page_number: 8,
-    reviewed_at: '2026-09-14T14:00:00Z',
-    source_id: 'tse-candidatos-2026'
-  },
-  {
-    id: 'prop-pe-03-tra',
-    candidate_id: 'cand-pe-dep-03',
-    topic: 'Trabalho e Renda',
-    excerpt: 'Redução da jornada máxima de trabalho sem redução de salários pelo fim da escala 6x1, revogação das reformas trabalhista e previdenciária e fortalecimento sindical de base.',
-    document_url: 'https://divulgacandcontas.tse.jus.br',
-    page_number: 14,
-    reviewed_at: '2026-09-14T15:00:00Z',
-    source_id: 'tse-candidatos-2026'
-  }
+  // ---- PERNAMBUCO — GOVERNADOR ----
+  { id: 'prop-pe-gov-01-edu', candidate_id: 'cand-pe-gov-01', topic: 'Educação', excerpt: 'Ampliação do programa de escolas em tempo integral no interior e reestruturação da carreira docente com plano de cargos, carreira e salários.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 12, reviewed_at: '2026-09-10T12:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-pe-gov-01-sau', candidate_id: 'cand-pe-gov-01', topic: 'Saúde', excerpt: 'Reforma e modernização dos grandes hospitais estaduais da RMR e expansão das unidades de diagnóstico por imagem no interior.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 19, reviewed_at: '2026-09-11T10:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-pe-gov-01-seg', candidate_id: 'cand-pe-gov-01', topic: 'Segurança Pública', excerpt: 'Integração das forças de segurança estadual e municipal com ampliação do videomonitoramento e das delegacias especializadas.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 24, reviewed_at: '2026-09-11T11:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-pe-gov-01-eco', candidate_id: 'cand-pe-gov-01', topic: 'Desenvolvimento Econômico', excerpt: 'Atração de investimentos para o Porto Digital e polo farmacoquímico de Goiana com simplificação tributária para novas empresas.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 31, reviewed_at: '2026-09-11T12:00:00Z', source_id: 'tse-candidatos-2026' },
+
+  { id: 'prop-pe-gov-02-edu', candidate_id: 'cand-pe-gov-02', topic: 'Educação', excerpt: 'Fortalecimento do pacto pela alfabetização na idade certa em parceria com todos os municípios e criação de centros de educação bilíngue.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 16, reviewed_at: '2026-09-10T14:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-pe-gov-02-sau', candidate_id: 'cand-pe-gov-02', topic: 'Saúde', excerpt: 'Integração digital do prontuário eletrônico do paciente e abertura de centros regionais de consultas especializadas no Agreste e Sertão.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 24, reviewed_at: '2026-09-11T15:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-pe-gov-02-mob', candidate_id: 'cand-pe-gov-02', topic: 'Mobilidade Urbana', excerpt: 'Implantação de tarifa integrada metropolitana, apoio à eletrificação progressiva da frota do metrô e BRTs nas vias federais.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 31, reviewed_at: '2026-09-12T16:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-pe-gov-02-amb', candidate_id: 'cand-pe-gov-02', topic: 'Meio Ambiente', excerpt: 'Plano estadual de dessalinização para 200 municípios do semiárido e expansão do programa de cisternas e barragens calha.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 38, reviewed_at: '2026-09-12T17:00:00Z', source_id: 'tse-candidatos-2026' },
+
+  { id: 'prop-pe-gov-03-seg', candidate_id: 'cand-pe-gov-03', topic: 'Segurança Pública', excerpt: 'Armamento e equipamento da Polícia Civil e Militar com câmeras corporais, expansão das delegacias 24h e combate ao narcotráfico.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 8, reviewed_at: '2026-09-10T10:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-pe-gov-03-eco', candidate_id: 'cand-pe-gov-03', topic: 'Economia', excerpt: 'Desburocratização para micro e pequenas empresas, redução do ICMS para o setor produtivo e atração de indústrias com incentivos fiscais.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 15, reviewed_at: '2026-09-10T11:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-pe-gov-03-edu', candidate_id: 'cand-pe-gov-03', topic: 'Educação', excerpt: 'Introdução de ensino técnico e profissionalizante nas escolas estaduais em parceria com o SENAI e SENAC a partir do 9º ano.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 21, reviewed_at: '2026-09-10T12:00:00Z', source_id: 'tse-candidatos-2026' },
+
+  { id: 'prop-pe-gov-04-tra', candidate_id: 'cand-pe-gov-04', topic: 'Trabalho e Renda', excerpt: 'Programa estadual de renda mínima para famílias em vulnerabilidade e criação de cooperativas de economia solidária no Sertão.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 10, reviewed_at: '2026-09-10T09:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-pe-gov-04-sau', candidate_id: 'cand-pe-gov-04', topic: 'Saúde', excerpt: 'Fortalecimento do SUS com ampliação das Unidades de Pronto Atendimento (UPAs) e criação de ambulatórios de saúde da mulher regionalizados.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 17, reviewed_at: '2026-09-10T10:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-pe-gov-04-cult', candidate_id: 'cand-pe-gov-04', topic: 'Cultura', excerpt: 'Valorização das manifestações culturais pernambucanas com fundo estadual de cultura ampliado e agenda de festival permanente no interior.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 24, reviewed_at: '2026-09-10T11:00:00Z', source_id: 'tse-candidatos-2026' },
+
+  // ---- PRESIDÊNCIA ----
+  { id: 'prop-pres-01-edu', candidate_id: 'cand-br-pres-01', topic: 'Educação', excerpt: 'Consolidação e expansão do ProUni e do FIES, criação de novos institutos federais e bolsas permanência nas universidades públicas.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 14, reviewed_at: '2026-09-13T10:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-pres-01-eco', candidate_id: 'cand-br-pres-01', topic: 'Economia', excerpt: 'Política industrial neoindustrializante com foco na reindustrialização, defesa da Petrobras e Banco do Brasil como instrumentos de desenvolvimento.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 22, reviewed_at: '2026-09-13T11:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-pres-01-amb', candidate_id: 'cand-br-pres-01', topic: 'Meio Ambiente', excerpt: 'Desmatamento zero na Amazônia, reativação do Fundo Amazônia com recursos internacionais e transição energética para fontes renováveis.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 35, reviewed_at: '2026-09-13T12:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-pres-01-soc', candidate_id: 'cand-br-pres-01', topic: 'Social', excerpt: 'Manutenção e expansão do Bolsa Família, ampliação do Minha Casa Minha Vida e criação do programa farmácia popular gratuita.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 48, reviewed_at: '2026-09-13T13:00:00Z', source_id: 'tse-candidatos-2026' },
+
+  { id: 'prop-pres-02-eco', candidate_id: 'cand-br-pres-02', topic: 'Economia', excerpt: 'Agenda de privatizações, concessões e parcerias público-privadas com equilíbrio fiscal rigoroso e reforma tributária simplificadora.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 18, reviewed_at: '2026-09-13T14:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-pres-02-seg', candidate_id: 'cand-br-pres-02', topic: 'Segurança Pública', excerpt: 'Endurecimento da legislação penal, integração nacional das polícias com Força Nacional ampliada e combate ao crime organizado transnacional.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 26, reviewed_at: '2026-09-13T15:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-pres-02-edu', candidate_id: 'cand-br-pres-02', topic: 'Educação', excerpt: 'Foco no ensino fundamental, expansão do ensino técnico profissionalizante e modelo de escolas cívico-militares em municípios vulneráveis.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 21, reviewed_at: '2026-09-13T16:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-pres-02-inf', candidate_id: 'cand-br-pres-02', topic: 'Infraestrutura', excerpt: 'Conclusão das obras do trem intercidades SP-Campinas, ferroanel paulista e ampliação das rodovias federais via concessão.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 33, reviewed_at: '2026-09-13T17:00:00Z', source_id: 'tse-candidatos-2026' },
+
+  { id: 'prop-pres-03-eco', candidate_id: 'cand-br-pres-03', topic: 'Economia', excerpt: 'Revisão da política de abertura comercial com agenda de acordos bilaterais estratégicos e defesa da agropecuária brasileira.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 12, reviewed_at: '2026-09-14T10:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-pres-03-seg', candidate_id: 'cand-br-pres-03', topic: 'Segurança Pública', excerpt: 'Programa nacional de enfrentamento ao crime organizado com inteligência policial integrada e revisão das penas para crimes hediondos.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 19, reviewed_at: '2026-09-14T11:00:00Z', source_id: 'tse-candidatos-2026' },
+
+  { id: 'prop-pres-04-tra', candidate_id: 'cand-br-pres-04', topic: 'Trabalho', excerpt: 'Revogação da reforma trabalhista de 2017, recomposição dos direitos sindicais e criação de programa nacional de qualificação profissional.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 11, reviewed_at: '2026-09-14T14:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-pres-04-inf', candidate_id: 'cand-br-pres-04', topic: 'Infraestrutura', excerpt: 'Programa de transição energética com investimentos em hidrogênio verde, transmissão elétrica e revitalização da CEITEC.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 24, reviewed_at: '2026-09-14T15:00:00Z', source_id: 'tse-candidatos-2026' },
+
+  // ---- SÃO PAULO ----
+  { id: 'prop-sp-gov-01-eco', candidate_id: 'cand-sp-gov-01', topic: 'Emprego e Renda', excerpt: 'Fomento a cooperativas populares, polos tecnológicos de inovação na periferia e programa estadual de primeiro emprego para jovens.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 18, reviewed_at: '2026-09-14T10:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-sp-gov-01-hab', candidate_id: 'cand-sp-gov-01', topic: 'Habitação', excerpt: 'Programa de urbanização de favelas e construção de 100 mil unidades habitacionais populares na Grande São Paulo.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 25, reviewed_at: '2026-09-14T11:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-sp-gov-01-tra', candidate_id: 'cand-sp-gov-01', topic: 'Transporte', excerpt: 'Expansão do metrô e CPTM para municípios da Grande São Paulo com tarifa zero para estudantes e trabalhadores de baixa renda.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 32, reviewed_at: '2026-09-14T12:00:00Z', source_id: 'tse-candidatos-2026' },
+
+  { id: 'prop-sp-dep-01-edu', candidate_id: 'cand-sp-dep-01', topic: 'Educação', excerpt: 'Projeto de lei para remuneração mínima dos professores acima do piso nacional e programa federal de alfabetização na primeira infância.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 9, reviewed_at: '2026-09-15T10:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-sp-dep-01-gov', candidate_id: 'cand-sp-dep-01', topic: 'Governança', excerpt: 'Criação de comissão parlamentar de transparência de dados públicos e regulamentação do lobby no Congresso Nacional.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 16, reviewed_at: '2026-09-15T11:00:00Z', source_id: 'tse-candidatos-2026' },
+
+  // ---- RIO DE JANEIRO ----
+  { id: 'prop-rj-gov-01-seg', candidate_id: 'cand-rj-gov-01', topic: 'Segurança Cidadã', excerpt: 'Integração de câmeras com reconhecimento facial e fortalecimento das Unidades de Ordem Pública em cooperação com a Prefeitura do Rio.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 22, reviewed_at: '2026-09-14T14:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-rj-gov-01-eco', candidate_id: 'cand-rj-gov-01', topic: 'Economia e Turismo', excerpt: 'Posicionamento do Rio como hub de turismo de negócios com construção do Parque Olímpico Legacy e atração de feiras internacionais.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 30, reviewed_at: '2026-09-14T15:00:00Z', source_id: 'tse-candidatos-2026' },
+
+  { id: 'prop-rj-gov-02-seg', candidate_id: 'cand-rj-gov-02', topic: 'Segurança Pública', excerpt: 'Operações de combate a facções criminosas com Forças Armadas em cooperação com PM e Civil, redução das UPPs como modelo principal.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 8, reviewed_at: '2026-09-15T10:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-rj-gov-02-eco', candidate_id: 'cand-rj-gov-02', topic: 'Economia', excerpt: 'Revisão dos royalties do petróleo para o Estado do Rio e criação de fundo soberano para investimento em infraestrutura.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 17, reviewed_at: '2026-09-15T11:00:00Z', source_id: 'tse-candidatos-2026' },
+
+  // ---- MINAS GERAIS ----
+  { id: 'prop-mg-gov-01-inf', candidate_id: 'cand-mg-gov-01', topic: 'Infraestrutura', excerpt: 'Retomada do programa de concessões rodoviárias em MG e modernização do Aeroporto de Confins como hub regional.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 14, reviewed_at: '2026-09-15T12:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-mg-gov-01-eco', candidate_id: 'cand-mg-gov-01', topic: 'Economia', excerpt: 'Atração de indústria de baterias e mineração de lítio com incentivos fiscais e programa de transição justa para municípios mineradores.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 22, reviewed_at: '2026-09-15T13:00:00Z', source_id: 'tse-candidatos-2026' },
+
+  { id: 'prop-mg-gov-02-ene', candidate_id: 'cand-mg-gov-02', topic: 'Energia', excerpt: 'Ampliação das usinas de energia solar em MG com programa de painéis fotovoltaicos para municípios e pequenas propriedades rurais.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 11, reviewed_at: '2026-09-15T14:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-mg-gov-02-edu', candidate_id: 'cand-mg-gov-02', topic: 'Educação', excerpt: 'Expansão das escolas de tempo integral com foco no ensino médio técnico e valorização dos professores com bônus por desempenho.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 19, reviewed_at: '2026-09-15T15:00:00Z', source_id: 'tse-candidatos-2026' },
+
+  { id: 'prop-mg-dep-01-gov', candidate_id: 'cand-mg-dep-01', topic: 'Governança', excerpt: 'Projetos de lei para controle das redes sociais em relação à desinformação, regulamentação das plataformas digitais e proteção de dados.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 7, reviewed_at: '2026-09-15T16:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-mg-dep-01-seg', candidate_id: 'cand-mg-dep-01', topic: 'Segurança', excerpt: 'PEC do porte de armas com critérios objetivos, ampliação dos limites de legítima defesa e endurecimento das penas para crimes violentos.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 14, reviewed_at: '2026-09-15T17:00:00Z', source_id: 'tse-candidatos-2026' },
+
+  // ---- BAHIA ----
+  { id: 'prop-ba-gov-01-edu', candidate_id: 'cand-ba-gov-01', topic: 'Educação', excerpt: 'Universalização das escolas de tempo integral na Bahia até 2028, com alimentação e transporte gratuitos.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 13, reviewed_at: '2026-09-16T10:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-ba-gov-01-amb', candidate_id: 'cand-ba-gov-01', topic: 'Meio Ambiente', excerpt: 'Programa de combate à desertificação no semiárido baiano e ampliação do abastecimento hídrico com dessalinizadores.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 21, reviewed_at: '2026-09-16T11:00:00Z', source_id: 'tse-candidatos-2026' },
+
+  { id: 'prop-ba-gov-02-eco', candidate_id: 'cand-ba-gov-02', topic: 'Economia', excerpt: 'Agenda de desburocratização empresarial, desenvolvimento do polo industrial de Camaçari e atração de investimentos do exterior.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 10, reviewed_at: '2026-09-16T12:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-ba-gov-02-seg', candidate_id: 'cand-ba-gov-02', topic: 'Segurança', excerpt: 'Reestruturação das forças policiais baianas, ampliação de delegacias especializadas e combate ao crime organizado no Recôncavo.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 18, reviewed_at: '2026-09-16T13:00:00Z', source_id: 'tse-candidatos-2026' },
+
+  // ---- CEARÁ ----
+  { id: 'prop-ce-gov-01-edu', candidate_id: 'cand-ce-gov-01', topic: 'Educação', excerpt: 'Consolidação e exportação do modelo do Ceará de educação pública com escolas em tempo integral e premiação por resultados no IDEB.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 9, reviewed_at: '2026-09-16T10:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-ce-gov-01-eco', candidate_id: 'cand-ce-gov-01', topic: 'Economia', excerpt: 'Expansão do polo industrial portuário do Pecém e posicionamento do Ceará como hub de exportação de hidrogênio verde.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 17, reviewed_at: '2026-09-16T11:00:00Z', source_id: 'tse-candidatos-2026' },
+
+  { id: 'prop-ce-gov-02-seg', candidate_id: 'cand-ce-gov-02', topic: 'Segurança', excerpt: 'Operações integradas contra o CV e grupos rivais com presença policial permanente nos bairros mais vulneráveis de Fortaleza.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 8, reviewed_at: '2026-09-16T12:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-ce-gov-02-eco', candidate_id: 'cand-ce-gov-02', topic: 'Economia', excerpt: 'Incentivos fiscais para novas indústrias no interior do Ceará, fortalecimento do agronegócio irrigado e turismo de sol e mar.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 15, reviewed_at: '2026-09-16T13:00:00Z', source_id: 'tse-candidatos-2026' },
+
+  // ---- RIO GRANDE DO SUL ----
+  { id: 'prop-rs-gov-01-rec', candidate_id: 'cand-rs-gov-01', topic: 'Reconstrução', excerpt: 'Plano estadual de reconstrução pós-enchentes com recursos federais e internacionais, reforma habitacional e prevenção de desastres.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 5, reviewed_at: '2026-09-16T10:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-rs-gov-01-agr', candidate_id: 'cand-rs-gov-01', topic: 'Agropecuária', excerpt: 'Programa de apoio ao cooperativismo gaúcho e reestruturação do seguro rural para pequenos agricultores afetados pelas cheias.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 14, reviewed_at: '2026-09-16T11:00:00Z', source_id: 'tse-candidatos-2026' },
+
+  { id: 'prop-rs-gov-02-eco', candidate_id: 'cand-rs-gov-02', topic: 'Economia', excerpt: 'Redução da carga tributária estadual para indústria, revisão dos royalties do petróleo para o RS e desburocratização empresarial.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 10, reviewed_at: '2026-09-16T12:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-rs-gov-02-seg', candidate_id: 'cand-rs-gov-02', topic: 'Segurança', excerpt: 'Endurecimento contra o crime organizado no RS, combate ao narcotráfico na fronteira e expansão das delegacias especializadas.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 17, reviewed_at: '2026-09-16T13:00:00Z', source_id: 'tse-candidatos-2026' },
+
+  // ---- PARANÁ ----
+  { id: 'prop-pr-dep-01-tra', candidate_id: 'cand-pr-dep-01', topic: 'Trabalho', excerpt: 'Revogação dos pontos mais lesivos da reforma trabalhista, garantia do imposto sindical voluntário e amplição da CLT digital.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 9, reviewed_at: '2026-09-16T14:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-pr-dep-01-dir', candidate_id: 'cand-pr-dep-01', topic: 'Direitos Sociais', excerpt: 'PEC de ampliação dos direitos das trabalhadoras domésticas, programa de creches em tempo integral e licença parental igualitária.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 16, reviewed_at: '2026-09-16T15:00:00Z', source_id: 'tse-candidatos-2026' },
+
+  { id: 'prop-pr-sen-01-jus', candidate_id: 'cand-pr-sen-01', topic: 'Justiça e Segurança', excerpt: 'PEC do equilíbrio entre os poderes e projeto de lei para tornar definitivas as regras do sistema de delação premiada com supervisão judicial.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 8, reviewed_at: '2026-09-16T16:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-pr-sen-01-eco', candidate_id: 'cand-pr-sen-01', topic: 'Economia', excerpt: 'Defesa do teto de gastos reformulado e da âncora fiscal com meta de resultado primário estrutural e redução progressiva da dívida pública.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 15, reviewed_at: '2026-09-16T17:00:00Z', source_id: 'tse-candidatos-2026' },
+
+  // ---- PERNAMBUCO — DEP. FEDERAIS ----
+  { id: 'prop-pe-dep-01-agr', candidate_id: 'cand-pe-dep-01', topic: 'Agricultura Familiar', excerpt: 'Programa federal de crédito rural facilitado para pequenos agricultores do Nordeste e ampliação do PAA (Programa de Aquisição de Alimentos).', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 10, reviewed_at: '2026-09-16T10:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-pe-dep-01-inf', candidate_id: 'cand-pe-dep-01', topic: 'Infraestrutura Hídrica', excerpt: 'Conclusão das obras de transposição do Rio São Francisco e implantação de canais de distribuição nos municípios do Sertão pernambucano.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 17, reviewed_at: '2026-09-16T11:00:00Z', source_id: 'tse-candidatos-2026' },
+
+  { id: 'prop-pe-dep-03-edu', candidate_id: 'cand-pe-dep-03', topic: 'Educação', excerpt: 'Revogação integral do Novo Ensino Médio, destinação de 10% do PIB para a educação pública e valorização do piso salarial dos professores.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 8, reviewed_at: '2026-09-14T14:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-pe-dep-03-tra', candidate_id: 'cand-pe-dep-03', topic: 'Trabalho e Renda', excerpt: 'Redução da jornada máxima de trabalho sem redução de salários pelo fim da escala 6x1, revogação das reformas trabalhista e previdenciária.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 14, reviewed_at: '2026-09-14T15:00:00Z', source_id: 'tse-candidatos-2026' },
+  { id: 'prop-pe-dep-03-hum', candidate_id: 'cand-pe-dep-03', topic: 'Direitos Humanos', excerpt: 'Programa de reparação histórica para populações quilombolas, indígenas e comunidades tradicionais com titulação de terras.', document_url: 'https://divulgacandcontas.tse.jus.br', page_number: 21, reviewed_at: '2026-09-14T16:00:00Z', source_id: 'tse-candidatos-2026' },
 ];
 
 export const localClaims = [

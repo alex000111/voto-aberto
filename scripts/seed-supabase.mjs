@@ -44,8 +44,7 @@ async function upsert(table, rows) {
 async function main() {
   console.log('Iniciando sincronização com o Supabase:', url);
 
-  // Limpar candidatos para remover os antigos e corrigir numeração
-  await fetch(`${url}/rest/v1/candidates?id=not.is.null`, { method: 'DELETE', headers: { apikey: key } });
+  // Não deletar candidatos do banco pois usamos a ingestão oficial!
   
   const sources = [
     { id: 'tse-candidatos-2026', name: 'TSE — Candidatos 2026', url: 'https://dadosabertos.tse.jus.br/dataset/candidatos-2026', authority: 'Tribunal Superior Eleitoral', status: 'ok' },
@@ -55,8 +54,8 @@ async function main() {
   ];
   await upsert('sources', sources);
 
-  await upsert('candidates', localCandidates);
-  await upsert('candidate_versions', localCandidateVersions);
+  // await upsert('candidates', localCandidates);
+  // await upsert('candidate_versions', localCandidateVersions);
   await upsert('change_events', localChangeEvents);
   await upsert('polls', localPolls);
   await upsert('proposals', localProposals);

@@ -1,0 +1,194 @@
+{
+  "officialRecords": 20984,
+  "photos": 20981,
+  "bytes": 117696928,
+  "missing": [
+    "130002553354",
+    "130002553353",
+    "130002553352"
+  ],
+  "unmatchedProfiles": [
+    {
+      "id": "cand-pe-dep-01",
+      "name": "Pedro Campos",
+      "reason": "Sem identidade oficial unívoca em 2026"
+    },
+    {
+      "id": "cand-sp-gov-01",
+      "name": "Guilherme Boulos",
+      "reason": "Sem identidade oficial unívoca em 2026"
+    },
+    {
+      "id": "cand-sp-sen-01",
+      "name": "Eduardo Bolsonaro",
+      "reason": "Sem identidade oficial unívoca em 2026"
+    },
+    {
+      "id": "cand-mg-gov-01",
+      "name": "Rodrigo Pacheco",
+      "reason": "Sem identidade oficial unívoca em 2026"
+    },
+    {
+      "id": "cand-mg-gov-02",
+      "name": "Alexandre Silveira",
+      "reason": "Sem identidade oficial unívoca em 2026"
+    },
+    {
+      "id": "cand-ce-sen-01",
+      "name": "Camilo Santana",
+      "reason": "Sem identidade oficial unívoca em 2026"
+    },
+    {
+      "id": "cand-rs-gov-01",
+      "name": "Gabriel Souza",
+      "reason": "Sem identidade oficial unívoca em 2026"
+    },
+    {
+      "id": "cand-rs-sen-01",
+      "name": "Hamilton Mourão",
+      "reason": "Sem identidade oficial unívoca em 2026"
+    }
+  ],
+  "archives": [
+    {
+      "uf": "AC",
+      "photos": 388,
+      "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_AC_div.zip"
+    },
+    {
+      "uf": "AM",
+      "photos": 475,
+      "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_AM_div.zip"
+    },
+    {
+      "uf": "AL",
+      "photos": 299,
+      "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_AL_div.zip"
+    },
+    {
+      "uf": "BR",
+      "photos": 28,
+      "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_BR_div.zip"
+    },
+    {
+      "uf": "AP",
+      "photos": 322,
+      "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_AP_div.zip"
+    },
+    {
+      "uf": "BA",
+      "photos": 1224,
+      "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_BA_div.zip"
+    },
+    {
+      "uf": "DF",
+      "photos": 668,
+      "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_DF_div.zip"
+    },
+    {
+      "uf": "ES",
+      "photos": 591,
+      "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_ES_div.zip"
+    },
+    {
+      "uf": "CE",
+      "photos": 713,
+      "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_CE_div.zip"
+    },
+    {
+      "uf": "MA",
+      "photos": 619,
+      "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_MA_div.zip"
+    },
+    {
+      "uf": "GO",
+      "photos": 905,
+      "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_GO_div.zip"
+    },
+    {
+      "uf": "MG",
+      "photos": 1829,
+      "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_MG_div.zip"
+    },
+    {
+      "uf": "PA",
+      "photos": 741,
+      "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_PA_div.zip"
+    },
+    {
+      "uf": "MT",
+      "photos": 455,
+      "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_MT_div.zip"
+    },
+    {
+      "uf": "MS",
+      "photos": 425,
+      "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_MS_div.zip"
+    },
+    {
+      "uf": "PI",
+      "photos": 402,
+      "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_PI_div.zip"
+    },
+    {
+      "uf": "PB",
+      "photos": 450,
+      "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_PB_div.zip"
+    },
+    {
+      "uf": "PE",
+      "photos": 961,
+      "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_PE_div.zip"
+    },
+    {
+      "uf": "RN",
+      "photos": 330,
+      "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_RN_div.zip"
+    },
+    {
+      "uf": "PR",
+      "photos": 1090,
+      "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_PR_div.zip"
+    },
+    {
+      "uf": "RJ",
+      "photos": 2055,
+      "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_RJ_div.zip"
+    },
+    {
+      "uf": "RR",
+      "photos": 413,
+      "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_RR_div.zip"
+    },
+    {
+      "uf": "RO",
+      "photos": 438,
+      "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_RO_div.zip"
+    },
+    {
+      "uf": "RS",
+      "photos": 1053,
+      "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_RS_div.zip"
+    },
+    {
+      "uf": "SE",
+      "photos": 411,
+      "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_SE_div.zip"
+    },
+    {
+      "uf": "SC",
+      "photos": 700,
+      "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_SC_div.zip"
+    },
+    {
+      "uf": "SP",
+      "photos": 2628,
+      "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_SP_div.zip"
+    },
+    {
+      "uf": "TO",
+      "photos": 368,
+      "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_TO_div.zip"
+    }
+  ]
+}

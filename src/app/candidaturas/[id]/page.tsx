@@ -1,3 +1,5 @@
+import CandidatePhoto from '@/components/CandidatePhoto';
+import {getCandidatePhoto} from '@/lib/candidate-photos';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getCandidate, getCandidateChanges, getCandidateHistory, getCandidateProposals } from '@/lib/candidates';
@@ -14,6 +16,7 @@ export default async function Page({
   const { id } = await params;
   const c = await getCandidate(id);
   if (!c) notFound();
+  const portrait=getCandidatePhoto(c.id);
 
   const [history, changes, dbProposals] = await Promise.all([
     getCandidateHistory(id),
@@ -38,6 +41,10 @@ export default async function Page({
       </Link>
 
       <div className="profileHead">
+        <div style={{display:'grid',gap:10,justifyItems:'center'}}>
+          <CandidatePhoto name={c.ballot_name} photoUrl={portrait?.src||null} year={portrait?.year} size={144} priority/>
+          {portrait?<a className="stamp" href={portrait.sourceUrl} target="_blank" rel="noreferrer">Foto: TSE · {portrait.year} ↗</a>:<span className="stamp">Foto oficial indisponível</span>}
+        </div>
         <div>
           <div className="eyebrow">
             {c.office} • {c.uf || c.scope}

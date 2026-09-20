@@ -1,3 +1,4 @@
+import {getCandidatePhoto} from '@/lib/candidate-photos';
 import Link from 'next/link';
 import { dbConfigured, dbSelect } from '@/lib/supabase-rest';
 import { candidateQuery, UFS, UF_NAMES, OFFICES } from '@/lib/candidate-query';
@@ -82,8 +83,8 @@ export default async function Page({
             {candidates.map(c => (
               <Link className="candidateCard" href={`/candidaturas/${encodeURIComponent(c.id)}`} key={c.id}>
                 <CandidatePhoto
-                  sourceId={c.source_id}
-                  uf={c.uf}
+                  photoUrl={getCandidatePhoto(c.id)?.src||null}
+                  year={getCandidatePhoto(c.id)?.year}
                   name={c.ballot_name}
                   size={72}
                 />

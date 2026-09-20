@@ -1,0 +1,58 @@
+{
+  "cand-pe-dep-01": {
+    "src": "/candidate-photos/2022/170001619899-49a2c9e16ef0.jpg",
+    "sourceUrl": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2022/fotos/foto_cand2022_PE_div.zip",
+    "year": 2022,
+    "officialCandidateId": "170001619899",
+    "officialFullName": "PEDRO HENRIQUE DE ANDRADE LIMA CARNEIRO CAMPOS"
+  },
+  "cand-sp-gov-01": {
+    "src": "/candidate-photos/2022/250001613761-b2d0aa36f315.jpg",
+    "sourceUrl": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2022/fotos/foto_cand2022_SP_div.zip",
+    "year": 2022,
+    "officialCandidateId": "250001613761",
+    "officialFullName": "GUILHERME CASTRO BOULOS"
+  },
+  "cand-sp-sen-01": {
+    "src": "/candidate-photos/2022/250001611374-190a5a80dd49.jpg",
+    "sourceUrl": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2022/fotos/foto_cand2022_SP_div.zip",
+    "year": 2022,
+    "officialCandidateId": "250001611374",
+    "officialFullName": "EDUARDO NANTES BOLSONARO"
+  },
+  "cand-mg-gov-02": {
+    "src": "/candidate-photos/2022/130001713762-60cc52701fa3.jpg",
+    "sourceUrl": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2022/fotos/foto_cand2022_MG_div.zip",
+    "year": 2022,
+    "officialCandidateId": "130001713762",
+    "officialFullName": "ALEXANDRE SILVEIRA DE OLIVEIRA"
+  },
+  "cand-ce-sen-01": {
+    "src": "/candidate-photos/2022/60001633582-e7f405156fe5.jpg",
+    "sourceUrl": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2022/fotos/foto_cand2022_CE_div.zip",
+    "year": 2022,
+    "officialCandidateId": "60001633582",
+    "officialFullName": "CAMILO SOBREIRA DE SANTANA"
+  },
+  "cand-rs-gov-01": {
+    "src": "/candidate-photos/2022/210001609848-484f072f1e46.jpg",
+    "sourceUrl": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2022/fotos/foto_cand2022_RS_div.zip",
+    "year": 2022,
+    "officialCandidateId": "210001609848",
+    "officialFullName": "GABRIEL VIEIRA DE SOUZA"
+  },
+  "cand-rs-sen-01": {
+    "src": "/candidate-photos/2022/210001610438-c4e6c798fb70.jpg",
+    "sourceUrl": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2022/fotos/foto_cand2022_RS_div.zip",
+    "year": 2022,
+    "officialCandidateId": "210001610438",
+    "officialFullName": "ANTONIO HAMILTON MARTINS MOURÃO"
+  },
+  "cand-mg-gov-01": {
+    "src": "/candidate-photos/2018/130000604556-db9e09e269aa.jpg",
+    "sourceUrl": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2018/fotos/foto_cand2018_MG_div.zip",
+    "year": 2018,
+    "officialCandidateId": "130000604556",
+    "officialFullName": "RODRIGO OTÁVIO SOARES PACHECO"
+  }
+}
