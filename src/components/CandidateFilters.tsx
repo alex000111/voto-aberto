@@ -7,9 +7,9 @@ interface Props {
   q: string;
   uf: string;
   cargo: string;
-  ufs: string[];
+  ufs: readonly string[];
   ufNames: Record<string, string>;
-  offices: string[];
+  offices: readonly string[];
 }
 
 export default function CandidateFilters({ q, uf, cargo, ufs, ufNames, offices }: Props) {
